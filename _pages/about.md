@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Postdoctoral machine learning researcher at [Disney Research](https://disneyresearch.com), Pittsburgh.
+I am a postdoctoral machine learning researcher at [Disney Research](https://disneyresearch.com), Pittsburgh.
 My research interests include scalable algorithms for approximate Bayesian inference, and applications to natural language processing (NLP).
 
 I joined Disney Research in September of 2016, where I've since been working in the statistical machine learning group lead by [Stephan Mandt](http://stephanmandt.com).
