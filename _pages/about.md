@@ -9,9 +9,9 @@ redirect_from:
 ---
 
 I am a Postdoctoral machine learning researcher at [Disney Research](https://disneyresearch.com), Pittsburgh.
-My research interests are scalable algorithms for approximate Bayesian inference, and applications to natural language processing (NLP).
+My research interests include scalable algorithms for approximate Bayesian inference, and applications to natural language processing (NLP).
 
-I joined Disney Research in September of 2016, where I've been working in the statistical machine learning group lead by [Stephan Mandt](http://stephanmandt.com).
+I joined Disney Research in September of 2016, where I've since been working in the statistical machine learning group lead by [Stephan Mandt](http://stephanmandt.com).
 From 2012 to 2016 I did my Ph.D. at the [Institute for Theoretical Physics](http://www.thp.uni-koeln.de/) of the University of Cologne under the supervision of [Achim Rosch](http://www.thp.uni-koeln.de/rosch/A_Rosch.html) and with support by [German Telekom Foundation](https://www.telekom-stiftung.de/en).
 
 
