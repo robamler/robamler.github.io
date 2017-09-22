@@ -21,7 +21,7 @@ From 2012 to 2016 I did my Ph.D. at the [Institute for Theoretical Physics](http
   **Perturbative Black Box Variational Inference**  
   [PDF](files/bamler-pvi-nips-2017.pdf)
   | [NIPS 2017, to appear](https://nips.cc/Conferences/2017/AcceptedPapersInitial)
-  <!-- | [arXiv:TODO](http://arxiv.org/abs/TODO) -->
+  | [arXiv:1709.07433](http://arxiv.org/abs/1709.07433)
 * R. Bamler and S. Mandt,  
   **Structured Black Box Variational Inference for Latent Time Series Models**  
   [PDF](files/bamler-structured-bbvi-tsw-2017.pdf)
