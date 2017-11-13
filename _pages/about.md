@@ -17,6 +17,11 @@ From 2012 to 2016 I did my Ph.D. at the [Institute for Theoretical Physics](http
 
 ## Machine Learning Publications
 
+* G. Ji, R. Bamler, E.B. Sudderth, and S. Mandt,  
+  **Bayesian Paragraph Vectors**  
+  [PDF](files/ji-bayesian-paragraph-vectors-2017.pdf)
+  | [Workshop "Advances in Approximate Bayesian Inference" at NIPS 2017, submitted](http://approximateinference.org/) 
+  | [arXiv:1711.03946](https://arxiv.org/abs/1711.03946)
 * R. Bamler, C. Zhang, M. Opper, and S. Mandt,  
   **Perturbative Black Box Variational Inference**  
   [PDF](files/bamler-pvi-nips-2017.pdf)
