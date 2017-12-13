@@ -37,6 +37,7 @@ From 2012 to 2016 I did my Ph.D. at the [Institute for Theoretical Physics](http
   [PDF](files/bamler-dynamic-word-embeddings-icml-2017.pdf)
   | [ICML 2017](http://proceedings.mlr.press/v70/bamler17a.html)
   | [arXiv:1702.08359](http://arxiv.org/abs/1702.08359)
+  | [video abstract](https://youtu.be/2uQ6bgemuLw)
 
 
 
