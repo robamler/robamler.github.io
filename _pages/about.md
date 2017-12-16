@@ -17,27 +17,27 @@ From 2012 to 2016 I did my Ph.D. at the [Institute for Theoretical Physics](http
 
 ## Machine Learning Publications
 
-* G. Ji, R. Bamler, E.B. Sudderth, and S. Mandt,  
-  **Bayesian Paragraph Vectors**  
-  [PDF](files/ji-bayesian-paragraph-vectors-2017.pdf)
-  | [AABI Workshop at NIPS 2017, to appear](http://approximateinference.org/accepted/)
-  | [arXiv:1711.03946](https://arxiv.org/abs/1711.03946)
 * R. Bamler, C. Zhang, M. Opper, and S. Mandt,  
   **Perturbative Black Box Variational Inference**  
   [PDF](files/bamler-pvi-nips-2017.pdf)
-  | [NIPS 2017, to appear](https://nips.cc/Conferences/2017/Schedule?showEvent=9284)
+  | [NIPS 2017](https://papers.nips.cc/paper/7093-perturbative-black-box-variational-inference)
   | [arXiv:1709.07433](http://arxiv.org/abs/1709.07433)
-* R. Bamler and S. Mandt,  
-  **Structured Black Box Variational Inference for Latent Time Series Models**  
-  [PDF](files/bamler-structured-bbvi-tsw-2017.pdf)
-  | [Time Series Workshop at ICML 2017](http://roseyu.com/time-series-workshop/#papers)
-  | [arXiv:1707.01069](http://arxiv.org/abs/1707.01069)
+* G. Ji, R. Bamler, E.B. Sudderth, and S. Mandt,  
+  **Bayesian Paragraph Vectors**  
+  [PDF](files/ji-bayesian-paragraph-vectors-2017.pdf)
+  | [AABI Workshop at NIPS 2017](http://approximateinference.org/accepted/)
+  | [arXiv:1711.03946](https://arxiv.org/abs/1711.03946)
 * R. Bamler and S. Mandt,  
   **Dynamic Word Embeddings**  
   [PDF](files/bamler-dynamic-word-embeddings-icml-2017.pdf)
   | [ICML 2017](http://proceedings.mlr.press/v70/bamler17a.html)
   | [arXiv:1702.08359](http://arxiv.org/abs/1702.08359)
   | [video abstract](https://youtu.be/2uQ6bgemuLw)
+* R. Bamler and S. Mandt,  
+  **Structured Black Box Variational Inference for Latent Time Series Models**  
+  [PDF](files/bamler-structured-bbvi-tsw-2017.pdf)
+  | [Time Series Workshop at ICML 2017](http://roseyu.com/time-series-workshop/#papers)
+  | [arXiv:1707.01069](http://arxiv.org/abs/1707.01069)
 
 
 
