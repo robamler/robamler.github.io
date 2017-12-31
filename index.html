@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <!-- begin SEO -->
+  <title>Robert Bamler &mdash; Machine Learning Researcher at Disney Research</title>
+  <meta property="og:locale" content="en-US">
+  <meta property="og:site_name" content="Robert Bamler">
+  <meta property="og:title" content="Robert Bamler">
+  <link rel="canonical" href="https://robamler.github.io/">
+  <meta property="og:url" content="https://robamler.github.io/">
+  <meta property="og:description" content="Machine learning researcher at Disney Research">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Robert Bamler",
+      "url": "https://robamler.github.io",
+      "image": "https://robamler.github.io/robert-bamler.jpg",
+      "affiliation": {
+        "name": "Disney Research",
+        "location": {
+          "@type": "PostalAddress",
+          "addressLocality": "Glendale",
+          "addressRegion": "CA",
+          "postalCode": "91201",
+          "streetAddress": "1401 Flower Street"
+        },
+        "url": "https://www.disneyresearch.com"
+      }
+    }
+  </script>
+  <meta name="google-site-verification" content="eqHtqIFdKf5IuV3a-pO3e1rBgJjgg-a3M0FkjoD5YF8">
+  <!-- end SEO -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  </script>
+  <style>
+  a:focus {
+    outline: thin dotted #f89406;
+    outline: 5px auto #f89406;
+    outline-offset: -2px;
+  }
+
+  *,*:before,*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  html {
+    box-sizing: border-box;
+    background-color: #fff;
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  @media (min-width: 48em) {
+    html {
+      font-size: 18px;
+    }
+  }
+
+  body {
+    margin: 0;
+  }
+
+  ::-moz-selection {
+    color: #fff;
+    background: #000;
+  }
+
+  ::selection {
+    color: #fff;
+    background: #000;
+  }
+
+  article,header,main,section {
+    display: block;
+  }
+
+  video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+  }
+
+  a {
+    color: #52adc8;
+  }
+
+  a:hover,a:active {
+    outline: 0;
+  }
+
+  img {
+    max-width: 100%;
+    width: auto\9;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    color: #494e52;
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    line-height: 1.5;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    margin: 2em 0 0.5em;
+    line-height: 1.2;
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    font-weight: bold;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: 1.563em;
+  }
+
+  h2 {
+    font-size: 1.25em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  h4 {
+    font-size: .75em;
+  }
+
+  h5 {
+    font-size: .75em;
+  }
+
+  h6 {
+    font-size: .75em;
+  }
+
+  p {
+    margin-bottom: 1.3em;
+  }
+
+  p,ul {
+    orphans: 3;
+    widows: 3;
+  }
+
+  a:hover,a:active {
+    outline: 0;
+  }
+
+  ul li {
+    margin-bottom: 0.5em;
+  }
+
+  li ul {
+    margin-top: 0.5em;
+  }
+
+  b,i,strong,p,img,h1,h2,header,a {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .hidden {
+    display: none;
+    visibility: hidden;
+  }
+
+  .wrapper {
+    max-width: 925px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wrapper:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  .social-icons .fa {
+    color: #000;
+  }
+
+  .social-icons .fa-github,.social-icons .fa-github-alt,.social-icons .fa-github-square {
+    color: #171516;
+  }
+
+  .social-icons .fa-linkedin,.social-icons .fa-linkedin-square {
+    color: #007bb6;
+  }
+
+  @media (min-width: 57.8125em) {
+    .sticky {
+      clear: both;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 2em;
+    }
+
+    .sticky::after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+
+    .sticky>* {
+      display: block;
+    }
+  }
+
+  @-webkit-keyframes intro {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes intro {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  #main {
+    max-width: 925px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    margin-top: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    animation: intro 0.3s both;
+    animation-delay: 0.35s;
+  }
+
+  #main:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  #main::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+  @media (min-width: 80em) {
+    #main {
+      max-width: 1280px;
+    }
+  }
+
+  @media (min-width: 57.8125em) {
+    .page {
+      width: 83.0508474576%;
+      float: right;
+      margin-right: 0;
+      padding-left: 4.2372881356%;
+      padding-right: 16.9491525424%;
+    }
+  }
+
+  .page .page__inner-wrap {
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .page .page__inner-wrap .page__content,.page .page__inner-wrap .page__meta {
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .page__title {
+    margin-top: 0;
+    line-height: 1;
+  }
+
+  .page__title+.page__meta {
+    margin-top: -0.5em;
+  }
+
+  .page__lead {
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    font-size: 1.25em;
+  }
+
+  .page__content h2 {
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #f2f3f3;
+  }
+
+  .page__content p,.page__content li {
+    font-size: 1em;
+  }
+
+  .page__content p {
+    margin: 0 0 1.3em;
+  }
+
+  .page__content a {
+    text-decoration: none;
+  }
+
+  .page__content a:hover {
+    text-decoration: underline;
+  }
+
+  .page__content a:hover img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .page__meta {
+    margin-top: 2em;
+    color: #9ba1a6;
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    font-size: .75em;
+  }
+
+  .page__meta p {
+    margin: 0;
+  }
+
+  .page__meta a {
+    color: inherit;
+  }
+
+  .page__meta-title {
+    margin-bottom: 10px;
+    font-size: .75em;
+    text-transform: uppercase;
+  }
+
+  .sidebar {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    clear: both;
+    margin-bottom: 1em;
+  }
+
+  .sidebar::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+  @media (min-width: 57.8125em) {
+    .sidebar {
+      width: 15.2542372881%;
+      float: left;
+      margin-right: 1.6949152542%;
+      opacity: 0.75;
+      -webkit-transition: opacity 0.2s ease-in-out;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .sidebar:hover {
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: 80em) {
+    .sidebar {
+      padding-right: 0;
+    }
+  }
+
+  .sidebar h2,.sidebar h3,.sidebar h4,.sidebar h5,.sidebar h6 {
+    margin-bottom: 0;
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+  }
+
+  .sidebar h3,.sidebar h4 {
+    font-size: 1em;
+  }
+
+  .sidebar p,.sidebar li {
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    font-size: .75em;
+    line-height: 1.5;
+  }
+
+  .sidebar img {
+    width: 100%;
+  }
+
+  .author__avatar {
+    display: table-cell;
+    vertical-align: top;
+    width: 36px;
+    height: 36px;
+  }
+
+  @media (min-width: 57.8125em) {
+    .author__avatar {
+      display: block;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .author__avatar img {
+    max-width: 175px;
+    border-radius: 50%;
+  }
+
+  @media (min-width: 57.8125em) {
+    .author__avatar img {
+      padding: 5px;
+      border: 1px solid #f2f3f3;
+    }
+  }
+
+  .author__content {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 15px;
+    padding-right: 25px;
+    line-height: 1;
+  }
+
+  @media (min-width: 57.8125em) {
+    .author__content {
+      display: block;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .author__name {
+    margin: 0;
+  }
+
+  @media (min-width: 57.8125em) {
+    .author__name {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .sidebar .author__name {
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    font-size: 1em;
+  }
+
+  .author__bio {
+    margin: 0;
+  }
+
+  @media (min-width: 57.8125em) {
+    .author__bio {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .author__urls-wrapper {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    z-index: 10;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .author__urls-wrapper li:last-child a {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 57.8125em) {
+    .author__urls-wrapper {
+      display: block;
+    }
+  }
+
+  .author__urls {
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-top: 15px;
+    padding: 10px;
+    list-style-type: none;
+    border: 1px solid #f2f3f3;
+    border-radius: 4px;
+    background: #fff;
+    z-index: -1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    cursor: default;
+  }
+
+  @media (min-width: 57.8125em) {
+    .author__urls {
+      display: block;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+
+  .author__urls:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -11px;
+    left: calc(50% - 10px);
+    width: 0;
+    border-style: solid;
+    border-width: 0 10px 10px;
+    border-color: #f2f3f3 transparent;
+    z-index: 0;
+  }
+
+  @media (min-width: 57.8125em) {
+    .author__urls:before {
+      display: none;
+    }
+  }
+
+  .author__urls:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 10px);
+    width: 0;
+    border-style: solid;
+    border-width: 0 10px 10px;
+    border-color: #fff transparent;
+    z-index: 1;
+  }
+
+  @media (min-width: 57.8125em) {
+    .author__urls:after {
+      display: none;
+    }
+  }
+
+  .author__urls li {
+    white-space: nowrap;
+  }
+
+  .author__urls a {
+    display: block;
+    margin-bottom: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: inherit;
+    font-size: 1em;
+    text-decoration: none;
+  }
+
+  .author__urls a:hover {
+    text-decoration: underline;
+  }
+
+  /*!
+   *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
+   *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+   */
+
+  @font-face {
+    font-family: 'FontAwesome';
+    src: url("../fonts/fontawesome-webfont.eot?v=4.6.3");
+    src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .fa-fw {
+    width: 1.2857142857em;
+    text-align: center;
+  }
+
+  .fa-ul {
+    padding-left: 0;
+    margin-left: 2.1428571429em;
+    list-style-type: none;
+  }
+
+  .fa-ul>li {
+    position: relative;
+  }
+
+  .fa-li {
+    position: absolute;
+    left: -2.1428571429em;
+    width: 2.1428571429em;
+    top: .1428571429em;
+    text-align: center;
+  }
+
+  @-webkit-keyframes fa-spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(359deg);
+      transform: rotate(359deg);
+    }
+  }
+
+  @keyframes fa-spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(359deg);
+      transform: rotate(359deg);
+    }
+  }
+
+  .fa-text-width:before {
+    content: "";
+  }
+
+  .fa-map-marker:before {
+    content: "";
+  }
+
+  .fa-linkedin-square:before {
+    content: "";
+  }
+
+  .fa-github-square:before {
+    content: "";
+  }
+
+  .fa-github:before {
+    content: "";
+  }
+
+  .fa-group:before {
+    content: "";
+  }
+
+  .fa-link:before {
+    content: "";
+  }
+
+  .fa-square:before {
+    content: "";
+  }
+
+  .fa-envelope:before {
+    content: "";
+  }
+
+  .fa-linkedin:before {
+    content: "";
+  }
+
+  .fa-h-square:before {
+    content: "";
+  }
+
+  .fa-github-alt:before {
+    content: "";
+  }
+
+  .fa-html5:before {
+    content: "";
+  }
+
+  .fa-css3:before {
+    content: "";
+  }
+
+  .fa-file:before {
+    content: "";
+  }
+
+  .fa-file-text:before {
+    content: "";
+  }
+
+  .fa-try:before {
+    content: "";
+  }
+
+  .fa-envelope-square:before {
+    content: "";
+  }
+
+  .fa-university:before {
+    content: "";
+  }
+
+  .fa-google:before {
+    content: "";
+  }
+
+  .fa-language:before {
+    content: "";
+  }
+
+  .fa-support:before {
+    content: "";
+  }
+
+  .fa-header:before {
+    content: "";
+  }
+
+  .fa-paragraph:before {
+    content: "";
+  }
+
+  .fa-at:before {
+    content: "";
+  }
+
+  .fa-cc:before {
+    content: "";
+  }
+
+  .fa-object-group:before {
+    content: "";
+  }
+
+  .fa-chrome:before {
+    content: "";
+  }
+
+  .fa-firefox:before {
+    content: "";
+  }
+
+  .fa-map:before {
+    content: "";
+  }
+
+  .fa-fa:before {
+    content: "";
+  }
+  @font-face {
+    font-family: 'Academicons';
+    src: url('fonts/academicons.eot?v=1.8.0');
+    src: url('fonts/academicons.eot?v=1.8.0') format('embedded-opentype'),        url('fonts/academicons.ttf?v=1.8.0') format('truetype'),        url('fonts/academicons.woff?v=1.8.0') format('woff'),        url('fonts/academicons.svg?v=1.8.0#academicons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .fa-fw {
+    width: 1.28571429em;
+    text-align: center;
+  }
+
+  .fa-ul {
+    padding-left: 0;
+    margin-left: 2.14285714em;
+    list-style-type: none;
+  }
+
+  .fa-ul > li {
+    position: relative;
+  }
+
+  .fa-li {
+    position: absolute;
+    left: -2.14285714em;
+    width: 2.14285714em;
+    top: 0.14285714em;
+    text-align: center;
+  }
+  </style>
+</head>
+
+<body>
+  <div id="main" role="main">
+    <div class="sidebar sticky">
+      <div itemscope="" itemtype="http://schema.org/Person">
+        <div class="author__avatar"> <img src="robert-bamler.jpg" class="author__avatar" alt="Robert Bamler"></div>
+        <div class="author__content">
+          <h3 class="author__name">Robert Bamler</h3>
+          <p class="author__bio">Postdoctoral machine learning researcher working on scalable Bayesian inference algorithms and their applications to NLP.</p>
+        </div>
+        <div class="author__urls-wrapper">
+          <ul class="author__urls social-icons">
+            <li><a href="https://www.disneyresearch.com/"><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Disney Research</a></li>
+            <li><a id="emadr" href="mailto:Robert.Bamler%20-AT-%20disneyresearch.com"><i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a><script>
+              a='lto:robert';
+              b='disneyresearch';
+              c='@'
+              d='bamler';
+              e='.'
+              f='com'
+              g='mai'+a+e+d+c+b+e+f;
+              document.getElementById('emadr').href=g;
+              </script></li>
+            <li><a href="https://www.linkedin.com/in/robert-bamler"><i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></li>
+            <li><a href="https://github.com/robamler"><i class="fa fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <article class="page" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="headline" content="Robert Bamler">
+      <meta itemprop="description" content="Machine learning researcher at Disney Research">
+      <div class="page__inner-wrap">
+        <header>
+          <h1 class="page__title" itemprop="headline">Robert Bamler</h1></header>
+        <section class="page__content" itemprop="text">
+          <p>I am a postdoctoral machine learning researcher at <a href="https://disneyresearch.com/">Disney Research</a>, Pittsburgh. My research interests include scalable algorithms for approximate Bayesian inference, and applications to natural language processing (NLP).</p>
+          <p>I joined Disney Research in September of 2016, where I’ve since been working in the statistical machine learning group lead by <a href="http://stephanmandt.com/">Stephan Mandt</a>.
+          From 2012 to 2016 I did my Ph.D. at the <a href="http://www.thp.uni-koeln.de/">Institute for Theoretical Physics</a> of the University of Cologne under the supervision of <a href="http://www.thp.uni-koeln.de/rosch/A_Rosch.html">Achim Rosch</a> and with support by <a href="https://www.telekom-stiftung.de/en">German Telekom Foundation</a>.</p>
+
+          <h2 id="machine-learning-publications">Machine Learning Publications</h2>
+          <ul>
+            <li>R. Bamler, C. Zhang, M. Opper, and S. Mandt,<br>
+              <strong>Perturbative Black Box Variational Inference</strong><br>
+              <a href="https://robamler.github.io/files/bamler-pvi-nips-2017.pdf">PDF</a>&nbsp;|
+              <a href="https://papers.nips.cc/paper/7093-perturbative-black-box-variational-inference">NIPS 2017</a>&nbsp;|
+              <a href="http://arxiv.org/abs/1709.07433">arXiv:1709.07433</a></li>
+            <li>G. Ji, R. Bamler, E.B. Sudderth, and S. Mandt,<br>
+              <strong>Bayesian Paragraph Vectors</strong><br>
+              <a href="https://robamler.github.io/files/ji-bayesian-paragraph-vectors-2017.pdf">PDF</a>&nbsp;|
+              <a href="http://approximateinference.org/accepted/">AABI Workshop at NIPS 2017</a>&nbsp;|
+              <a href="https://arxiv.org/abs/1711.03946">arXiv:1711.03946</a></li>
+            <li>R. Bamler and S. Mandt,<br>
+              <strong>Dynamic Word Embeddings</strong><br>
+              <a href="https://robamler.github.io/files/bamler-dynamic-word-embeddings-icml-2017.pdf">PDF</a>&nbsp;|
+              <a href="http://proceedings.mlr.press/v70/bamler17a.html">ICML 2017</a>&nbsp;|
+              <a href="http://arxiv.org/abs/1702.08359">arXiv:1702.08359</a>&nbsp;|
+              <a href="https://youtu.be/2uQ6bgemuLw">video abstract</a></li>
+            <li>R. Bamler and S. Mandt,<br>
+              <strong>Structured Black Box Variational Inference for Latent Time Series Models</strong><br>
+              <a href="https://robamler.github.io/files/bamler-structured-bbvi-tsw-2017.pdf">PDF</a>&nbsp;|
+              <a href="http://roseyu.com/time-series-workshop/#papers">Time Series Workshop at ICML 2017</a>&nbsp;|
+              <a href="http://arxiv.org/abs/1707.01069">arXiv:1707.01069</a></li>
+          </ul>
+          <h2 id="physics-publications">Physics Publications</h2>
+          <ul>
+            <li>R. Bamler,<br>
+              <strong>Phase-Space Berry Phases in Chiral Magnets: Skyrmion Charge, Hall Effect, and Dynamics of Magnetic Skyrmions</strong><br>
+              <a href="https://robamler.github.io/files/thesis-robert-bamler.pdf">PDF</a>&nbsp;|
+              <a href="http://kups.ub.uni-koeln.de/6916/">Ph.D. thesis, University of Cologne (2016)</a></li>
+            <li>R. Bamler and A. Rosch,<br>
+              <strong>Equilibration and approximate conservation laws: Dipole oscillations and perfect drag of ultracold atoms in a harmonic trap</strong><br>
+              <a href="https://robamler.github.io/files/bamler-equilibration-pra-2015.pdf">PDF</a>&nbsp;|
+              <a href="http://journals.aps.org/pra/abstract/10.1103/PhysRevA.91.063604">Phys. Rev. A 91, 063604 (2015)</a>&nbsp;|
+              <a href="http://arxiv.org/abs/1504.03375">arXiv:1504.03375</a></li>
+            <li>F. Freimuth, R. Bamler, Y. Mokrousov, and A. Rosch,<br>
+              <strong>Phase-space Berry phases in chiral magnets: Dzyaloshinskii-Moriya interaction and the charge of skyrmions</strong><br>
+              <a href="https://robamler.github.io/files/freimuth-skyrmion-charge-prb-2013.pdf">PDF</a>&nbsp;|
+              <a href="http://prb.aps.org/abstract/PRB/v88/i21/e214409">Phys. Rev. B 88, 214409 (2013)</a>&nbsp;|
+              <a href="http://arxiv.org/abs/1307.8085">arXiv:1307.8085</a></li>
+            <li>R. Ritz, M. Halder, C. Franz, A. Bauer, M. Wagner, R. Bamler, A. Rosch, and C. Pfleiderer,<br>
+              <strong>Giant generic topological Hall resistivity of MnSi under pressure</strong><br>
+              <a href="https://robamler.github.io/files/ritz-giant-prb-2013.pdf">PDF</a>&nbsp;|
+              <a href="http://prb.aps.org/abstract/PRB/v87/i13/e134424">Phys. Rev. B 87, 134424 (2013)</a></li>
+            <li>A. B. Sichert, R. Bamler, and J. L. van Hemmen,<br>
+              <strong>Hydrodynamic Object Recognition: When Multipoles Count</strong><br>
+              <a href="https://robamler.github.io/files/sichert-multipoles-prl-2009.pdf">PDF</a>&nbsp;|
+              <a href="http://prl.aps.org/abstract/PRL/v102/i5/e058104">Phys. Rev. Lett. 102, 058104 (2009)</a></li>
+          </ul>
+          <h2 id="misc">Misc</h2>
+          <ul>
+            <li>Want to read scientific papers on your e-reader, but disappointed with the layout and annoyed by a cumbersome file transfer? Try my browser extension <a href="http://dontprint.net/">Dontprint</a> for Google Chrome and Mozilla Firefox.</li>
+            <li>Before smartphones, how did people access Wikipedia when they were on the go? Some (few, really) used <a href="http://encyclopodia.sourceforge.net/">one of the first third party iPod apps</a>.</li>
+          </ul>
+        </section>
+        <p>&nbsp;</p>
+      </div>
+    </article>
+  </div>
+</body>
+
+</html>
