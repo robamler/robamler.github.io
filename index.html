@@ -523,6 +523,11 @@
     z-index: -1;
   }
 
+  .author__urls li {
+    white-space: nowrap;
+    display: inline;
+  }
+
   @media (min-width: 57.8125em) {
     .author__urls {
       display: block;
@@ -532,6 +537,10 @@
       border: 0;
       background: transparent;
       box-shadow: none;
+    }
+
+    .author__urls li {
+      display: block;
     }
   }
 
@@ -571,11 +580,6 @@
     .author__urls:after {
       display: none;
     }
-  }
-
-  .author__urls li {
-    white-space: nowrap;
-    display: inline;
   }
 
   .author__urls a {
@@ -871,11 +875,10 @@
         <div class="author__avatar"> <img src="robert-bamler.jpg" class="author__avatar" alt="Robert Bamler"></div>
         <div class="author__content">
           <h3 class="author__name">Robert Bamler</h3>
-          <p class="author__bio">Postdoctoral machine learning researcher working on scalable Bayesian inference algorithms and their applications to NLP.</p>
+          <p class="author__bio">Postdoctoral machine learning researcher at UC Irvine, California, working on scalable Bayesian inference algorithms and probabilistic embedding models.</p>
         </div>
         <div class="author__urls-wrapper">
           <ul class="author__urls social-icons">
-            <li><a href="https://www.ics.uci.edu/"><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> UC Irvine, California</a></li>
             <li><a id="emadr" href="mailto:rbamler%20-AT-%20uci.edu"><i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a><script>
               a='lto:r';
               b='uci';
