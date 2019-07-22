@@ -825,7 +825,37 @@
   	-webkit-font-smoothing:antialiased;
   	-moz-osx-font-smoothing:grayscale;
   }
+
+  video {
+    display: none;
+    margin: 1ex 0 2ex 0;
+    width: 100%;
+  }
   </style>
+
+  <script>
+    function toggle_video(e) {
+      e.preventDefault();
+      var l = e.currentTarget;
+      var v = l.nextElementSibling;
+      
+      if (v.style.display === 'block') {
+        v.pause();
+        v.style.display = 'none';
+        l.innerText = 'video abstract';
+      } else {
+        l.innerText = 'hide video';
+        var all_vids = document.getElementsByTagName('video');
+        for (var i=0; i<all_vids.length; i+=1) {
+          if (all_vids[i] !== v) {
+            all_vids[i].pause();
+          }
+        }
+        v.style.display = 'block';
+        v.play();
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -874,13 +904,27 @@
               <strong>Augmenting and Tuning Knowledge Graph Embeddings</strong><br>
               <a href="files/bamler-salehi-mandt-tuning-kges-uai2019.pdf">PDF</a>&nbsp;|
               UAI 2019 (accepted)&nbsp;|
-              <a href="https://arxiv.org/abs/1907.01068">arXiv:1907.01068</a></li>
+              <a href="https://arxiv.org/abs/1907.01068">arXiv:1907.01068</a>&nbsp;|
+              <a href="#" onclick="toggle_video(event)">video abstract</a>
+              <video controls poster="videos/bamler-salehi-mandt-tuning-kges-uai2019.png?b">
+                <source src="videos/bamler-salehi-mandt-tuning-kges-uai2019.webm?b" type="video/webm">
+                <source src="videos/bamler-salehi-mandt-tuning-kges-uai2019.mp4?b" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </li>
             <li>R. Bamler and S. Mandt,<br>
               <strong>A Quantum Field Theory of Representation Learning</strong><br>
               <a href="files/bamler-mandt-qft-of-representation-learning.pdf">PDF</a>&nbsp;|
               <a href="https://sites.google.com/view/icml2019phys4dl/accepted-papers">ICML 2019 Workshop on Theoretical Physics for
 Deep Learning</a>&nbsp;|
-              <a href="https://arxiv.org/abs/1907.02163">arXiv:1907.02163</a></li>
+              <a href="https://arxiv.org/abs/1907.02163">arXiv:1907.02163</a>&nbsp;|
+              <a href="#" onclick="toggle_video(event)">video abstract</a>
+              <video controls poster="videos/bamler-mandt-qft-of-representation-learning.png?b">
+                <source src="videos/bamler-mandt-qft-of-representation-learning.webm?b" type="video/webm">
+                <source src="videos/bamler-mandt-qft-of-representation-learning.mp4?b" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </li>
             <li>R. Bamler and S. Mandt,<br>
               <strong>Improving Optimization for Models With Continuous Symmetry Breaking</strong><br>
               <a href="files/bamler-goldstone-gd-icml-2018.pdf">PDF</a>&nbsp;|
