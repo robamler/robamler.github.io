@@ -37,17 +37,6 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1.0">
   <style>
-  @font-face {
-      font-family: 'Academicons';
-      src:url('fonts/academicons.eot?v=1.8.0');
-      src:url('fonts/academicons.eot?v=1.8.0') format('embedded-opentype'),
-          url('fonts/academicons.ttf?v=1.8.0') format('truetype'),
-          url('fonts/academicons.woff?v=1.8.0') format('woff'),
-          url('fonts/academicons.svg?v=1.8.0#academicons') format('svg');
-      font-weight: normal;
-      font-style: normal;
-  }
-
   a:focus {
     outline: thin dotted #f89406;
     outline: 5px auto #f89406;
@@ -67,6 +56,11 @@
   a.videolink:before{
     font-family: FontAwesome;
     content: "\f1c8\ ";
+  }
+
+  a.slides:before{
+    font-family: FontAwesome;
+    content: "\f26c\ ";
   }
 
   *,*:before,*:after {
@@ -211,7 +205,7 @@
     color: #000;
   }
 
-  .social-icons .fa-github,.social-icons .fa-github-alt,.social-icons .fa-github-square {
+  .social-icons .fa-github,.social-icons {
     color: #171516;
   }
 
@@ -656,128 +650,20 @@
     }
   }
 
-  .fa-text-width:before {
-    content: "";
-  }
-
-  .fa-map-marker:before {
-    content: "";
+  .fa-googlescholar:before {
+    content: "\f19d";
   }
 
   .fa-linkedin-square:before {
-    content: "";
-  }
-
-  .fa-github-square:before {
-    content: "";
+    content: "\f08c";
   }
 
   .fa-github:before {
-    content: "";
-  }
-
-  .fa-group:before {
-    content: "";
-  }
-
-  .fa-link:before {
-    content: "";
-  }
-
-  .fa-square:before {
-    content: "";
-  }
-
-  .fa-envelope:before {
-    content: "";
-  }
-
-  .fa-linkedin:before {
-    content: "";
-  }
-
-  .fa-h-square:before {
-    content: "";
-  }
-
-  .fa-github-alt:before {
-    content: "";
-  }
-
-  .fa-html5:before {
-    content: "";
-  }
-
-  .fa-css3:before {
-    content: "";
-  }
-
-  .fa-file:before {
-    content: "";
-  }
-
-  .fa-file-text:before {
-    content: "";
-  }
-
-  .fa-try:before {
-    content: "";
+    content: "\f09b";
   }
 
   .fa-envelope-square:before {
-    content: "";
-  }
-
-  .fa-university:before {
-    content: "";
-  }
-
-  .fa-google:before {
-    content: "";
-  }
-
-  .fa-language:before {
-    content: "";
-  }
-
-  .fa-support:before {
-    content: "";
-  }
-
-  .fa-header:before {
-    content: "";
-  }
-
-  .fa-paragraph:before {
-    content: "";
-  }
-
-  .fa-at:before {
-    content: "";
-  }
-
-  .fa-cc:before {
-    content: "";
-  }
-
-  .fa-object-group:before {
-    content: "";
-  }
-
-  .fa-chrome:before {
-    content: "";
-  }
-
-  .fa-firefox:before {
-    content: "";
-  }
-
-  .fa-map:before {
-    content: "";
-  }
-
-  .fa-fa:before {
-    content: "";
+    content: "\f199";
   }
 
   .fa-fw {
@@ -801,28 +687,6 @@
     width: 2.14285714em;
     top: 0.14285714em;
     text-align: center;
-  }
-
-  .ai-google-scholar:before {
-    content: "\e828";
-  }
-
-  .ai-google-scholar-square:before {
-    content: "\e829";
-  }
-
-  .ai-fw {
-    width: 1.28571429em;
-    text-align: center;
-  }
-
-  .ai {
-  	display:inline-block;
-  	font:normal normal normal 14px/1 Academicons;
-  	font-size:inherit;
-  	text-rendering:auto;
-  	-webkit-font-smoothing:antialiased;
-  	-moz-osx-font-smoothing:grayscale;
   }
 
   div.videocontainer {
@@ -885,7 +749,7 @@
               g='mai'+a+d+c+b+e+f;
               document.getElementById('emadr').href=g;
               </script></li>
-            <li><a href="https://scholar.google.com/citations?user=LwvdNAgAAAAJ"><i class="ai ai-google-scholar-square ai-fw"></i> Google Scholar</a></li>
+            <li><a href="https://scholar.google.com/citations?user=LwvdNAgAAAAJ"><i class="fa fa-fw fa-googlescholar"></i> Google Scholar</a></li>
             <li><a href="https://www.linkedin.com/in/robert-bamler"><i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></li>
             <li><a href="https://github.com/robamler"><i class="fa fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
           </ul>
@@ -898,8 +762,8 @@
           <h1 class="page__title">Robert Bamler</h1></header>
         <section class="page__content">
           <p>I am a postdoctoral researcher at <a href="https://www.ics.uci.edu/">University of California at Irvine (UCI)</a>.
-            I develop <em>statistical machine learning methods</em> that can detect subtle signals in noisy data sets.
-            My work on <em>probabilistic embedding models</em> combines representation learning with the invention of specialized <em>scalable approximate Bayesian inference algorithms</em>, often drawing on ideas from my background in statistical physics.</p>
+            I develop statistical machine learning methods that can detect subtle signals in noisy data sets.
+            My work on probabilistic embedding models combines representation learning with the invention of specialized scalable approximate Bayesian inference algorithms, often drawing on ideas from my background in statistical physics.</p>
           <p>I joined UCI in December of 2018, and I work in the statistical machine learning group lead by <a href="http://stephanmandt.com/">Stephan Mandt</a>.
             From 2016 to 2018, I was a postdoctoral researcher at <a href="https://www.disneyresearch.com/">Disney Research</a>.
             I received my PhD in theoretical statistical and quantum physics from <a href="http://www.thp.uni-koeln.de/">University of Cologne</a> in 2016, advised by <a href="http://www.thp.uni-koeln.de/rosch/A_Rosch.html">Achim Rosch</a> and with support from <a href="https://www.telekom-stiftung.de/en">German Telekom Foundation</a>.</p>
