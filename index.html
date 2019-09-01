@@ -47,7 +47,7 @@
 
     *,
     *::before,
-    *:after {
+    *::after {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
@@ -283,7 +283,7 @@
       z-index: -1;
     }
 
-    .social-links li {
+    .social-links>li {
       white-space: nowrap;
       display: inline;
     }
@@ -293,7 +293,7 @@
         padding: 0;
       }
 
-      .social-links li {
+      .social-links>li {
         display: block;
       }
     }
@@ -360,6 +360,19 @@
 
     .email::before {
       content: "\f199";
+    }
+
+    .down::before {
+      content: "\f063\00a0";
+    }
+
+    .sitemap {
+      padding: 0;
+    }
+
+    .sitemap>li {
+      display: block;
+      margin-bottom: 0.2em;
     }
 
     .page_content .icon {
@@ -484,7 +497,13 @@
           href="http://www.thp.uni-koeln.de/rosch/A_Rosch.html">Achim Rosch</a> and with support from <a
           href="https://www.telekom-stiftung.de/en">German Telekom Foundation</a>.</p>
 
-      <h2 id="machine-learning-publications">Machine Learning Publications</h2>
+      <ul class="sitemap">
+        <li><a class="icon down" href="#publications">Machine Learning Publications</a></li>
+        <li><a class="icon down" href="#physics-publications">Physics Publications</a></li>
+        <li><a class="icon down" href="#talks">Talks</a></li>
+      </ul>
+
+      <h2 id="publications">Machine Learning Publications</h2>
       <ul>
         <li>
           <div class="item_title">Augmenting and Tuning Knowledge Graph Embeddings</div>
@@ -609,6 +628,7 @@
           <a class="icon pdf" href="files/bamler-dynamic-word-embeddings-icml-2017.pdf">Paper (PDF)</a>
         </li>
       </ul>
+
       <footer>
         Page layout partially based on <a class="icon external" target="_blank"
           href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>
