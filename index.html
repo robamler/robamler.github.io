@@ -37,854 +37,547 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1.0">
   <style>
-  a:focus {
-    outline: thin dotted #f89406;
-    outline: 5px auto #f89406;
-    outline-offset: -2px;
-  }
+    @font-face {
+      font-family: 'FontAwesome';
+      src: url("../fonts/fontawesome-webfont.eot?v=4.6.3");
+      src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
 
-  a.external:before {
-    font-family: FontAwesome;
-    content: "\f08e\00a0";
-  }
+    *,
+    *::before,
+    *:after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
 
-
-  a.pdf:before{
-    font-family: FontAwesome;
-    content: "\f1c1\00a0";
-  }
-
-  a.video:before{
-    font-family: FontAwesome;
-    content: "\f01d\00a0";
-  }
-
-  a.videolink:before{
-    font-family: FontAwesome;
-    content: "\f1c8\00a0";
-  }
-
-  a.slides:before{
-    font-family: FontAwesome;
-    content: "\f26c\00a0";
-  }
-
-  *,*:before,*:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-  html {
-    box-sizing: border-box;
-    background-color: #fff;
-    font-size: 16px;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-  }
-
-  @media (min-width: 48em) {
     html {
-      font-size: 18px;
-    }
-  }
-
-  body {
-    margin: 0;
-  }
-
-  ::-moz-selection {
-    color: #fff;
-    background: #000;
-  }
-
-  ::selection {
-    color: #fff;
-    background: #000;
-  }
-
-  article,header,main,section {
-    display: block;
-  }
-
-  a {
-    color: #52adc8;
-  }
-
-  a:hover,a:active {
-    outline: 0;
-  }
-
-  img {
-    max-width: 100%;
-    width: auto\9;
-    height: auto;
-    vertical-align: middle;
-    border: 0;
-    -ms-interpolation-mode: bicubic;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-    color: #494e52;
-    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-    line-height: 1.5;
-  }
-
-  h1,h2,h3,h4,h5,h6 {
-    margin: 2em 0 0.5em;
-    line-height: 1.2;
-    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-    font-weight: bold;
-  }
-
-  h1 {
-    margin-top: 0;
-    font-size: 1.563em;
-  }
-
-  h2 {
-    font-size: 1.25em;
-  }
-
-  h3 {
-    font-size: 1em;
-  }
-
-  h4 {
-    font-size: .75em;
-  }
-
-  h5 {
-    font-size: .75em;
-  }
-
-  h6 {
-    font-size: .75em;
-  }
-
-  p {
-    margin-bottom: 1.3em;
-  }
-
-  p,ul {
-    orphans: 3;
-    widows: 3;
-  }
-
-  a:hover,a:active {
-    outline: 0;
-  }
-
-  ul li {
-    margin-bottom: 0.5em;
-  }
-
-  li ul {
-    margin-top: 0.5em;
-  }
-
-  b,i,strong,p,img,h1,h2,header,a {
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .hidden {
-    display: none;
-    visibility: hidden;
-  }
-
-  .wrapper {
-    max-width: 925px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .wrapper:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-
-  .social-icons .fa {
-    color: #000;
-  }
-
-  .social-icons .fa-github,.social-icons {
-    color: #171516;
-  }
-
-  @media (min-width: 57.8125em) {
-    .sticky {
-      clear: both;
-      position: -webkit-sticky;
-      position: sticky;
-      top: 2em;
+      background-color: #fff;
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
     }
 
-    .sticky::after {
-      clear: both;
-      content: "";
-      display: table;
+    @media (min-width: 48em) {
+      html {
+        font-size: 18px;
+      }
     }
 
-    .sticky>* {
+    article,
+    header,
+    section {
       display: block;
     }
-  }
 
-  @-webkit-keyframes intro {
-    0% {
-      opacity: 0;
+    a {
+      color: #52adc8;
     }
 
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes intro {
-    0% {
-      opacity: 0;
+    img {
+      -ms-interpolation-mode: bicubic;
     }
 
-    100% {
-      opacity: 1;
-    }
-  }
-
-  #main {
-    max-width: 925px;
-    margin-left: auto;
-    margin-right: auto;
-    clear: both;
-    margin-top: 2em;
-    padding-left: 1em;
-    padding-right: 1em;
-    animation: intro 0.3s both;
-    animation-delay: 0.35s;
-  }
-
-  #main:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-
-  #main::after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-
-  @media (min-width: 80em) {
-    #main {
-      max-width: 1280px;
-    }
-  }
-
-  @media (min-width: 57.8125em) {
-    .page {
-      width: 83.0508474576%;
-      float: right;
-      margin-right: 0;
-      padding-left: 4.2372881356%;
-      padding-right: 16.9491525424%;
-    }
-  }
-
-  .page .page__inner-wrap {
-    clear: both;
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .page .page__inner-wrap .page__content,.page .page__inner-wrap .page__meta {
-    clear: both;
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .page__title {
-    margin-top: 0;
-    line-height: 1;
-  }
-
-  .page__title+.page__meta {
-    margin-top: -0.5em;
-  }
-
-  .page__lead {
-    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-    font-size: 1.25em;
-  }
-
-  .page__content h2 {
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid #f2f3f3;
-  }
-
-  .page__content p,.page__content li {
-    font-size: 1em;
-  }
-
-  .page__content p {
-    margin: 0 0 1.3em;
-  }
-
-  .page__content a {
-    text-decoration: none;
-  }
-
-  .page__content a:hover {
-    text-decoration: underline;
-  }
-
-  .page__content a:hover img {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  }
-
-  .page__meta {
-    margin-top: 2em;
-    color: #9ba1a6;
-    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-    font-size: .75em;
-  }
-
-  .page__meta p {
-    margin: 0;
-  }
-
-  .page__meta a {
-    color: inherit;
-  }
-
-  .page__meta-title {
-    margin-bottom: 10px;
-    font-size: .75em;
-    text-transform: uppercase;
-  }
-
-  .sidebar {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    clear: both;
-    margin-bottom: 1em;
-  }
-
-  .sidebar::after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-
-  @media (min-width: 57.8125em) {
-    .sidebar {
-      width: 15.2542372881%;
-      float: left;
-      margin-right: 1.6949152542%;
-      opacity: 0.75;
-      -webkit-transition: opacity 0.2s ease-in-out;
-      transition: opacity 0.2s ease-in-out;
-    }
-
-    .sidebar:hover {
-      opacity: 1;
-    }
-  }
-
-  @media (min-width: 80em) {
-    .sidebar {
-      padding-right: 0;
-    }
-  }
-
-  .sidebar h2,.sidebar h3,.sidebar h4,.sidebar h5,.sidebar h6 {
-    margin-bottom: 0;
-    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-  }
-
-  .sidebar h3,.sidebar h4 {
-    font-size: 1em;
-  }
-
-  .sidebar p,.sidebar li {
-    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-    font-size: .75em;
-    line-height: 1.5;
-  }
-
-  .sidebar img {
-    width: 100%;
-  }
-
-  .author__avatar {
-    display: table-cell;
-    vertical-align: top;
-    width: 36px;
-    height: 36px;
-  }
-
-  @media (min-width: 57.8125em) {
-    .author__avatar {
-      display: block;
-      width: auto;
-      height: auto;
-    }
-  }
-
-  .author__avatar img {
-    max-width: 175px;
-    border-radius: 50%;
-  }
-
-  @media (min-width: 57.8125em) {
-    .author__avatar img {
-      padding: 5px;
-      border: 1px solid #f2f3f3;
-    }
-  }
-
-  .author__content {
-    display: table-cell;
-    vertical-align: top;
-    padding-left: 15px;
-    padding-right: 25px;
-    line-height: 1;
-  }
-
-  @media (min-width: 57.8125em) {
-    .author__content {
-      display: block;
-      width: 100%;
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
-
-  .author__name {
-    margin: 0;
-  }
-
-  @media (min-width: 57.8125em) {
-    .author__name {
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-  }
-
-  .sidebar .author__name {
-    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-    font-size: 1em;
-  }
-
-  .author__bio {
-    margin: 0;
-  }
-
-  @media (min-width: 57.8125em) {
-    .author__bio {
-      margin-top: 10px;
-      margin-bottom: 20px;
-    }
-  }
-
-  .author__urls-wrapper {
-    position: relative;
-    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-    z-index: 10;
-    cursor: pointer;
-  }
-
-  .author__urls-wrapper li:last-child a {
-    margin-bottom: 0;
-  }
-
-  @media (min-width: 57.8125em) {
-    .author__urls-wrapper {
-      display: block;
-    }
-  }
-
-  .author__urls {
-    right: 0;
-    padding-left: 0;
-    list-style-type: none;
-    border-radius: 4px;
-    z-index: -1;
-  }
-
-  .author__urls li {
-    white-space: nowrap;
-    display: inline;
-  }
-
-  @media (min-width: 57.8125em) {
-    .author__urls {
-      display: block;
-      position: relative;
+    body {
       margin: 0;
       padding: 0;
-      border: 0;
-      background: transparent;
-      box-shadow: none;
+      color: #494e52;
+      font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.5;
+      max-width: 925px;
+      margin-left: auto;
+      margin-right: auto;
+      clear: both;
+      margin-top: 2em;
+      padding-left: 1em;
+      padding-right: 1em;
     }
 
-    .author__urls li {
-      display: block;
+    @media (min-width: 58em) {
+      body {
+        display: table;
+      }
     }
-  }
 
-  .author__urls:before {
-    display: block;
-    content: "";
-    position: absolute;
-    top: -11px;
-    left: calc(50% - 10px);
-    width: 0;
-    border-style: solid;
-    border-width: 0 10px 10px;
-    border-color: #f2f3f3 transparent;
-    z-index: 0;
-  }
+    @media (min-width: 80em) {
+      body {
+        max-width: 1280px;
+      }
+    }
 
-  @media (min-width: 57.8125em) {
-    .author__urls:before {
+    h1,
+    h2 {
+      margin: 1.5em 0 0.5em;
+      line-height: 1.2;
+      font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    h1 {
+      font-weight: normal;
+      margin-top: 0;
+      font-size: 200%;
+    }
+
+    h2 {
+      font-weight: normal;
+      font-size: 170%;
+    }
+
+    p {
+      margin-bottom: 1.3em;
+    }
+
+    ul li {
+      margin-bottom: 0.7em;
+    }
+
+    li ul {
+      margin-top: 0.5em;
+    }
+
+    @media (min-width: 58em) {
+      .sticky {
+        clear: both;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 2em;
+      }
+
+      .sticky::after {
+        clear: both;
+        content: "";
+        display: table;
+      }
+    }
+
+    @media (min-width: 58em) {
+      .page {
+        width: 83%;
+        float: right;
+        margin-right: 0;
+        padding-left: 4%;
+        padding-right: 17%;
+      }
+    }
+
+    .page .page_content {
+      clear: both;
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    p {
+      margin: 0 0 1.3em;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+
+    @media (min-width: 58em) {
+      .sidebar {
+        width: 15%;
+        float: left;
+        margin-right: 1.7%;
+      }
+
+      .sidebar>.fade {
+        opacity: 0.75;
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+      }
+
+      .sidebar:hover>.fade {
+        opacity: 1;
+      }
+    }
+
+    @media (min-width: 80em) {
+      .sidebar {
+        padding-right: 0;
+      }
+    }
+
+    .sidebar p,
+    .sidebar li {
+      font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+      font-size: .75em;
+    }
+
+    .sidebar li {
+      line-height: 1.2;
+    }
+
+    .author_avatar {
+      display: table-cell;
+      vertical-align: top;
+      width: 36px;
+      height: 36px;
+    }
+
+    @media (min-width: 58em) {
+      .author_avatar {
+        display: block;
+        width: auto;
+        height: auto;
+      }
+    }
+
+    .author_avatar img {
+      max-width: 175px;
+      width: 100%;
+      border-radius: 50%;
+    }
+
+    .author_content {
+      display: table-cell;
+      vertical-align: top;
+      padding-left: 15px;
+      padding-right: 25px;
+    }
+
+    @media (min-width: 58em) {
+      .author_content {
+        display: block;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .author_name {
+      font-weight: bold;
+      line-height: 1;
+      margin: 0 0 .2em 0;
+    }
+
+    @media (min-width: 58em) {
+      .author_name {
+        margin-top: 1em;
+        margin-bottom: 0.3em;
+      }
+    }
+
+    .author_bio {
+      margin: 0;
+    }
+
+    .social-links {
+      right: 0;
+      padding: 0 0 1em 0.2em;
+      list-style-type: none;
+      border-radius: 4px;
+      z-index: -1;
+    }
+
+    .social-links li {
+      white-space: nowrap;
+      display: inline;
+    }
+
+    @media (min-width: 58em) {
+      .social-links {
+        padding: 0;
+      }
+
+      .social-links li {
+        display: block;
+      }
+    }
+
+    .social-links a {
+      padding-right: 0.7em;
+      color: inherit;
+    }
+
+    .icon::before {
+      font-family: FontAwesome;
+      font-size: 90%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .social-links .icon::before {
+      padding-right: 0.4em;
+    }
+
+    @media (min-width: 58em) {
+      .social-links .icon::before {
+        display: inline-block;
+        width: 1.6em;
+        text-align: center;
+      }
+    }
+
+    .external::before {
+      content: "\f08e\00a0";
+    }
+
+    .pdf::before {
+      content: "\f1c1\00a0";
+    }
+
+    .video::before {
+      content: "\f01d\00a0";
+    }
+
+    .videolink::before {
+      content: "\f1c8\00a0";
+    }
+
+    .slides::before {
+      content: "\f26c\00a0";
+    }
+
+    .googlescholar::before {
+      content: "\f19d";
+    }
+
+    .linkedin::before {
+      content: "\f08c";
+    }
+
+    .github::before {
+      content: "\f09b";
+    }
+
+    .email::before {
+      content: "\f199";
+    }
+
+    div.videocontainer {
       display: none;
-    }
-  }
-
-  .author__urls:after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: calc(50% - 10px);
-    width: 0;
-    border-style: solid;
-    border-width: 0 10px 10px;
-    border-color: #fff transparent;
-    z-index: 1;
-  }
-
-  @media (min-width: 57.8125em) {
-    .author__urls:after {
-      display: none;
-    }
-  }
-
-  .author__urls a {
-    margin-bottom: 5px;
-    padding-right: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    color: inherit;
-    font-size: 1em;
-    text-decoration: none;
-  }
-
-  .author__urls a:hover {
-    text-decoration: underline;
-  }
-
-  @font-face {
-    font-family: 'FontAwesome';
-    src: url("../fonts/fontawesome-webfont.eot?v=4.6.3");
-    src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  .fa {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  .fa-fw {
-    width: 1.2857142857em;
-    text-align: center;
-  }
-
-  .fa-ul {
-    padding-left: 0;
-    margin-left: 2.1428571429em;
-    list-style-type: none;
-  }
-
-  .fa-ul>li {
-    position: relative;
-  }
-
-  .fa-li {
-    position: absolute;
-    left: -2.1428571429em;
-    width: 2.1428571429em;
-    top: .1428571429em;
-    text-align: center;
-  }
-
-  @-webkit-keyframes fa-spin {
-    0% {
-      -webkit-transform: rotate(0deg);
-      transform: rotate(0deg);
+      margin-bottom: 4ex;
     }
 
-    100% {
-      -webkit-transform: rotate(359deg);
-      transform: rotate(359deg);
-    }
-  }
-
-  @keyframes fa-spin {
-    0% {
-      -webkit-transform: rotate(0deg);
-      transform: rotate(0deg);
+    video {
+      margin: 2ex 0 1ex 0;
+      width: 100%;
     }
 
-    100% {
-      -webkit-transform: rotate(359deg);
-      transform: rotate(359deg);
+    ul {
+      padding-left: 1.4em;
     }
-  }
-
-  .fa-googlescholar:before {
-    content: "\f19d";
-  }
-
-  .fa-linkedin-square:before {
-    content: "\f08c";
-  }
-
-  .fa-github:before {
-    content: "\f09b";
-  }
-
-  .fa-envelope-square:before {
-    content: "\f199";
-  }
-
-  .fa-fw {
-    width: 1.28571429em;
-    text-align: center;
-  }
-
-  .fa-ul {
-    padding-left: 0;
-    margin-left: 2.14285714em;
-    list-style-type: none;
-  }
-
-  .fa-ul > li {
-    position: relative;
-  }
-
-  .fa-li {
-    position: absolute;
-    left: -2.14285714em;
-    width: 2.14285714em;
-    top: 0.14285714em;
-    text-align: center;
-  }
-
-  div.videocontainer {
-    display: none;
-    margin-bottom: 4ex;
-  }
-
-  video {
-    margin: 2ex 0 1ex 0;
-    width: 100%;
-  }
   </style>
 
   <script>
     function toggle_video(e) {
       e.preventDefault();
-      var l = e.currentTarget;
-      var c = l.nextElementSibling;
-      var v = c.firstElementChild;
-      
-      if (c.style.display === 'block') {
-        v.pause();
-        c.style.display = 'none';
-        l.innerText = 'video abstract';
+      var link = e.currentTarget;
+      var container = link.nextElementSibling;
+      var video = container.firstElementChild;
+
+      if (container.style.display === 'block') {
+        video.pause();
+        container.style.display = 'none';
+        link.innerText = 'video abstract';
       } else {
-        l.innerText = 'hide video';
-        var all_vids = document.getElementsByTagName('video');
-        for (var i=0; i<all_vids.length; i+=1) {
-          if (all_vids[i] !== v) {
-            all_vids[i].pause();
+        link.innerText = 'hide video';
+        var all_videos = document.getElementsByTagName('video');
+        for (var i = 0; i < all_videos.length; i += 1) {
+          if (all_videos[i] !== video) {
+            all_videos[i].pause();
           }
         }
-        c.style.display = 'block';
-        v.play();
+        container.style.display = 'block';
+        video.play();
       }
 
-      l.blur();
+      link.blur();
     }
   </script>
 </head>
 
 <body>
-  <div id="main" role="main">
-    <div class="sidebar sticky">
-      <div>
-        <div class="author__avatar"> <img src="robert-bamler.jpg" class="author__avatar" alt="Robert Bamler"></div>
-        <div class="author__content">
-          <h3 class="author__name">Robert Bamler</h3>
-          <p class="author__bio">Postdoctoral machine learning researcher at UC Irvine, California, working on scalable Bayesian inference algorithms and probabilistic embedding models.</p>
-        </div>
-        <div class="author__urls-wrapper">
-          <ul class="author__urls social-icons">
-            <li><a id="emadr" href="mailto:rbamler%20-AT-%20uci.edu"><i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a><script>
-              a='lto:r';
-              b='uci';
-              c='@'
-              d='bamler';
-              e='.'
-              f='edu'
-              g='mai'+a+d+c+b+e+f;
-              document.getElementById('emadr').href=g;
-              </script></li>
-            <li><a href="https://scholar.google.com/citations?user=LwvdNAgAAAAJ"><i class="fa fa-fw fa-googlescholar"></i> Google Scholar</a></li>
-            <li><a href="https://www.linkedin.com/in/robert-bamler"><i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></li>
-            <li><a href="https://github.com/robamler"><i class="fa fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
-          </ul>
-        </div>
+  <div class="sidebar sticky">
+    <div class="fade">
+      <div class="author_avatar"><img src="robert-bamler.jpg" class="author_avatar" alt="Robert Bamler"></div>
+      <div class="author_content">
+        <div class="author_name">Robert Bamler</div>
+        <p class="author_bio">Postdoctoral machine learning researcher at UC Irvine, California, working on scalable
+          Bayesian inference algorithms and probabilistic embedding models.</p>
       </div>
     </div>
-    <article class="page">
-      <div class="page__inner-wrap">
-        <header>
-          <h1 class="page__title">Robert Bamler</h1></header>
-        <section class="page__content">
-          <p>I am a postdoctoral researcher at <a href="https://www.ics.uci.edu/">University of California at Irvine (UCI)</a>.
-            I develop statistical machine learning methods that can detect subtle signals in noisy data sets.
-            My work on probabilistic embedding models combines representation learning with the invention of specialized scalable approximate Bayesian inference algorithms, often drawing on ideas from my background in statistical physics.</p>
-          <p>I joined UCI in December of 2018, and I work in the statistical machine learning group lead by <a href="http://stephanmandt.com/">Stephan Mandt</a>.
-            From 2016 to 2018, I was a postdoctoral researcher at <a href="https://www.disneyresearch.com/">Disney Research</a>.
-            I received my PhD in theoretical statistical and quantum physics from <a href="http://www.thp.uni-koeln.de/">University of Cologne</a> in 2016, advised by <a href="http://www.thp.uni-koeln.de/rosch/A_Rosch.html">Achim Rosch</a> and with support from <a href="https://www.telekom-stiftung.de/en">German Telekom Foundation</a>.</p>
-
-          <h2 id="machine-learning-publications">Machine Learning Publications</h2>
-          <ul>
-            <li>R. Bamler, F. Salehi, and S. Mandt,<br>
-              <strong>Augmenting and Tuning Knowledge Graph Embeddings</strong><br>
-              <a class="pdf" href="files/bamler-salehi-mandt-tuning-kges-uai2019.pdf">PDF</a>&nbsp;|
-              UAI 2019 (accepted)&nbsp;|
-              <a class="external" target="_blank" href="https://arxiv.org/abs/1907.01068">arXiv:1907.01068</a>&nbsp;|
-              <a class="video" href="#" onclick="toggle_video(event)">video abstract (1&nbsp;min.)</a>
-              <div class="videocontainer">
-                <video controls poster="videos/bamler-salehi-mandt-tuning-kges-uai2019.png">
-                  <source src="videos/bamler-salehi-mandt-tuning-kges-uai2019.webm" type="video/webm">
-                  <source src="videos/bamler-salehi-mandt-tuning-kges-uai2019.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <a class="videolink" href="videos/bamler-salehi-mandt-tuning-kges-uai2019.mp4">Link to video</a>
-              </div>
-            </li>
-            <li>R. Bamler and S. Mandt,<br>
-              <strong>A Quantum Field Theory of Representation Learning</strong><br>
-              <a class="pdf" href="files/bamler-mandt-qft-of-representation-learning.pdf">PDF</a>&nbsp;|
-              <a class="external" target="_blank" href="https://sites.google.com/view/icml2019phys4dl/accepted-papers">ICML 2019 Workshop on Theoretical Physics for
-Deep Learning</a>&nbsp;|
-              <a class="external" target="_blank" href="https://arxiv.org/abs/1907.02163">arXiv:1907.02163</a>&nbsp;|
-              <a class="video"  href="#" onclick="toggle_video(event)">video abstract (4&nbsp;min.)</a>
-              <div class="videocontainer">
-                <video controls poster="videos/bamler-mandt-qft-of-representation-learning.png">
-                  <source src="videos/bamler-mandt-qft-of-representation-learning.webm" type="video/webm">
-                  <source src="videos/bamler-mandt-qft-of-representation-learning.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <a class="videolink" href="videos/bamler-mandt-qft-of-representation-learning.mp4">Link to video</a>
-              </div>
-            </li>
-            <li>R. Bamler and S. Mandt,<br>
-              <strong>Improving Optimization for Models With Continuous Symmetry Breaking</strong><br>
-              <a class="pdf" href="files/bamler-goldstone-gd-icml-2018.pdf">PDF</a>&nbsp;|
-              <a class="external" target="_blank" href="http://proceedings.mlr.press/v80/bamler18a.html">ICML 2018</a>&nbsp;|
-              <a class="external" target="_blank" href="https://arxiv.org/abs/1803.03234">arXiv:1803.03234</a></li>
-            <li>R. Bamler, C. Zhang, M. Opper, and S. Mandt,<br>
-              <strong>Perturbative Black Box Variational Inference</strong><br>
-              <a class="pdf" href="files/bamler-pbbvi-nips-2017.pdf">PDF</a>&nbsp;|
-              <a class="external" target="_blank" href="https://papers.nips.cc/paper/7093-perturbative-black-box-variational-inference">NIPS 2017</a>&nbsp;|
-              <a class="external" target="_blank" href="https://arxiv.org/abs/1709.07433">arXiv:1709.07433</a></li>
-            <li>G. Ji, R. Bamler, E.B. Sudderth, and S. Mandt,<br>
-              <strong>Bayesian Paragraph Vectors</strong><br>
-              <a class="pdf" href="files/ji-bayesian-paragraph-vectors-2017.pdf">PDF</a>&nbsp;|
-              <a class="external" target="_blank" href="http://approximateinference.org/accepted/">AABI Workshop at NIPS 2017</a>&nbsp;|
-              <a class="external" target="_blank" href="https://arxiv.org/abs/1711.03946">arXiv:1711.03946</a></li>
-            <li>R. Bamler and S. Mandt,<br>
-              <strong>Dynamic Word Embeddings</strong><br>
-              <a class="pdf" href="files/bamler-dynamic-word-embeddings-icml-2017.pdf">PDF</a>&nbsp;|
-              <a class="external" target="_blank" href="http://proceedings.mlr.press/v70/bamler17a.html">ICML 2017</a>&nbsp;|
-              <a class="external" target="_blank" href="https://arxiv.org/abs/1702.08359">arXiv:1702.08359</a>&nbsp;|
-              <a class="video" target="_blank" href="https://youtu.be/2uQ6bgemuLw">promotional video (3&nbsp;min.)</a>&nbsp;|
-              <a class="video" target="_blank" href="https://vimeo.com/240776794">conference talk (17&nbsp;min.)</a></li>
-            <li>R. Bamler and S. Mandt,<br>
-              <strong>Structured Black Box Variational Inference for Latent Time Series Models</strong><br>
-              <a class="pdf" href="files/bamler-structured-bbvi-tsw-2017.pdf">PDF</a>&nbsp;|
-              <a class="external" target="_blank" href="http://roseyu.com/time-series-workshop/#papers">Time Series Workshop at ICML 2017</a>&nbsp;|
-              <a class="external" target="_blank" href="https://arxiv.org/abs/1707.01069">arXiv:1707.01069</a></li>
-          </ul>
-
-          <h2 id="physics-publications">Physics Publications</h2>
-          <ul>
-            <li>R. Bamler,<br>
-              <strong>Phase-Space Berry Phases in Chiral Magnets: Skyrmion Charge, Hall Effect, and Dynamics of Magnetic Skyrmions</strong><br>
-              <a class="pdf" href="files/thesis-robert-bamler.pdf">PDF</a>&nbsp;|
-              <a class="external" target="_blank" href="http://kups.ub.uni-koeln.de/6916/">Ph.D. thesis, University of Cologne (2016)</a></li>
-            <li>R. Bamler and A. Rosch,<br>
-              <strong>Equilibration and approximate conservation laws: Dipole oscillations and perfect drag of ultracold atoms in a harmonic trap</strong><br>
-              <a class="pdf" href="files/bamler-equilibration-pra-2015.pdf">PDF</a>&nbsp;|
-              <a class="external" target="_blank" href="http://journals.aps.org/pra/abstract/10.1103/PhysRevA.91.063604">Phys. Rev. A 91, 063604 (2015)</a>&nbsp;|
-              <a class="external" target="_blank" href="https://arxiv.org/abs/1504.03375">arXiv:1504.03375</a></li>
-            <li>F. Freimuth, R. Bamler, Y. Mokrousov, and A. Rosch,<br>
-              <strong>Phase-space Berry phases in chiral magnets: Dzyaloshinskii-Moriya interaction and the charge of skyrmions</strong><br>
-              <a class="pdf" href="files/freimuth-skyrmion-charge-prb-2013.pdf">PDF</a>&nbsp;|
-              <a class="external" target="_blank" href="http://prb.aps.org/abstract/PRB/v88/i21/e214409">Phys. Rev. B 88, 214409 (2013)</a>&nbsp;|
-              <a class="external" target="_blank" href="https://arxiv.org/abs/1307.8085">arXiv:1307.8085</a></li>
-            <li>R. Ritz, M. Halder, C. Franz, A. Bauer, M. Wagner, R. Bamler, A. Rosch, and C. Pfleiderer,<br>
-              <strong>Giant generic topological Hall resistivity of MnSi under pressure</strong><br>
-              <a class="pdf" href="files/ritz-giant-prb-2013.pdf">PDF</a>&nbsp;|
-              <a class="external" target="_blank" href="http://prb.aps.org/abstract/PRB/v87/i13/e134424">Phys. Rev. B 87, 134424 (2013)</a></li>
-            <li>A. B. Sichert, R. Bamler, and J. L. van Hemmen,<br>
-              <strong>Hydrodynamic Object Recognition: When Multipoles Count</strong><br>
-              <a class="pdf" href="files/sichert-multipoles-prl-2009.pdf">PDF</a>&nbsp;|
-              <a class="external" target="_blank" href="http://prl.aps.org/abstract/PRL/v102/i5/e058104">Phys. Rev. Lett. 102, 058104 (2009)</a></li>
-          </ul>
-
-          <h2 id="talks">Talks</h2>
-          <p>
-            Below is a selection of past talks for which either recordings or slides are available.
-            Corporate policy prevents publication of most talks that I gave while being employed by Disney Research.
-          </p>
-          <ul>
-            <li>
-              <strong>Marrying Big Data And Probabilistic Models With Variational Inference</strong><br>
-              German Aerospace Center (DLR), 2019<br>
-              <a class="slides" target="_blank" href="https://docs.google.com/presentation/d/1QW5EKG3xIaLHMFCVURhzn6e4NYKG_e2xWh1KB3dkupI/edit?usp=sharing">Slides</a>
-            </li>
-            <li>
-              <strong>Dynamic Word Embeddings</strong><br>
-              ICML 2017<br>
-              <a class="video" target="_blank" href="https://vimeo.com/240776794">Video recording (17&nbsp;min.)</a>&nbsp;|
-              <a class="pdf" href="files/bamler-dynamic-word-embeddings-icml-2017.pdf">Paper (PDF)</a>
-            </li>
-          </ul>
-        </section>
-        <p>&nbsp;</p>
-      </div>
-    </article>
+    <ul class="social-links">
+      <li><a class="icon email" id="emadr" href="mailto:rbamler%20-AT-%20uci.edu">Email</a>
+        <script>
+          a = 'lto:r';
+          b = 'uci';
+          c = '@'
+          d = 'bamler';
+          e = '.'
+          f = 'edu'
+          g = 'mai' + a + d + c + b + e + f;
+          document.getElementById('emadr').href = g;
+        </script>
+      </li>
+      <li><a class="icon googlescholar" href="https://scholar.google.com/citations?user=LwvdNAgAAAAJ">Google
+          Scholar</a></li>
+      <li><a class="icon linkedin" href="https://www.linkedin.com/in/robert-bamler">LinkedIn</a></li>
+      <li><a class="icon github" href="https://github.com/robamler">Github</a>
+      </li>
+    </ul>
   </div>
+  <article class="page">
+    <header>
+      <h1 class="page_title">Robert Bamler</h1>
+    </header>
+    <section class="page_content">
+      <p>I am a postdoctoral researcher at <a href="https://www.ics.uci.edu/">University of California at Irvine
+          (UCI)</a>.
+        I develop statistical machine learning methods that can detect subtle signals in noisy data sets.
+        My work on probabilistic embedding models combines representation learning with the invention of specialized
+        scalable approximate Bayesian inference algorithms, often drawing on ideas from my background in statistical
+        physics.</p>
+      <p>I joined UCI in December of 2018, and I work in the statistical machine learning group lead by <a
+          href="http://stephanmandt.com/">Stephan Mandt</a>.
+        From 2016 to 2018, I was a postdoctoral researcher at <a href="https://www.disneyresearch.com/">Disney
+          Research</a>.
+        I received my PhD in theoretical statistical and quantum physics from <a
+          href="http://www.thp.uni-koeln.de/">University of Cologne</a> in 2016, advised by <a
+          href="http://www.thp.uni-koeln.de/rosch/A_Rosch.html">Achim Rosch</a> and with support from <a
+          href="https://www.telekom-stiftung.de/en">German Telekom Foundation</a>.</p>
+
+      <h2 id="machine-learning-publications">Machine Learning Publications</h2>
+      <ul>
+        <li>R. Bamler, F. Salehi, and S. Mandt,<br>
+          <strong>Augmenting and Tuning Knowledge Graph Embeddings</strong><br>
+          <a class="icon pdf" href="files/bamler-salehi-mandt-tuning-kges-uai2019.pdf">PDF</a>&nbsp;|
+          UAI 2019 (accepted)&nbsp;|
+          <a class="icon external" target="_blank" href="https://arxiv.org/abs/1907.01068">arXiv:1907.01068</a>&nbsp;|
+          <a class="icon video" href="#" onclick="toggle_video(event)">video abstract (1&nbsp;min.)</a>
+          <div class="videocontainer">
+            <video controls poster="videos/bamler-salehi-mandt-tuning-kges-uai2019.png">
+              <source src="videos/bamler-salehi-mandt-tuning-kges-uai2019.webm" type="video/webm">
+              <source src="videos/bamler-salehi-mandt-tuning-kges-uai2019.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <a class="icon videolink" href="videos/bamler-salehi-mandt-tuning-kges-uai2019.mp4">Link to video</a>
+          </div>
+        </li>
+        <li>R. Bamler and S. Mandt,<br>
+          <strong>A Quantum Field Theory of Representation Learning</strong><br>
+          <a class="icon pdf" href="files/bamler-mandt-qft-of-representation-learning.pdf">PDF</a>&nbsp;|
+          <a class="icon external" target="_blank"
+            href="https://sites.google.com/view/icml2019phys4dl/accepted-papers">ICML
+            2019 Workshop on Theoretical
+            Physics for
+            Deep Learning</a>&nbsp;|
+          <a class="icon external" target="_blank" href="https://arxiv.org/abs/1907.02163">arXiv:1907.02163</a>&nbsp;|
+          <a class="icon video" href="#" onclick="toggle_video(event)">video abstract (4&nbsp;min.)</a>
+          <div class="videocontainer">
+            <video controls poster="videos/bamler-mandt-qft-of-representation-learning.png">
+              <source src="videos/bamler-mandt-qft-of-representation-learning.webm" type="video/webm">
+              <source src="videos/bamler-mandt-qft-of-representation-learning.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <a class="icon videolink" href="videos/bamler-mandt-qft-of-representation-learning.mp4">Link to video</a>
+          </div>
+        </li>
+        <li>R. Bamler and S. Mandt,<br>
+          <strong>Improving Optimization for Models With Continuous Symmetry Breaking</strong><br>
+          <a class="icon pdf" href="files/bamler-goldstone-gd-icml-2018.pdf">PDF</a>&nbsp;|
+          <a class="icon external" target="_blank" href="http://proceedings.mlr.press/v80/bamler18a.html">ICML
+            2018</a>&nbsp;|
+          <a class="icon external" target="_blank" href="https://arxiv.org/abs/1803.03234">arXiv:1803.03234</a></li>
+        <li>R. Bamler, C. Zhang, M. Opper, and S. Mandt,<br>
+          <strong>Perturbative Black Box Variational Inference</strong><br>
+          <a class="icon pdf" href="files/bamler-pbbvi-nips-2017.pdf">PDF</a>&nbsp;|
+          <a class="icon external" target="_blank"
+            href="https://papers.nips.cc/paper/7093-perturbative-black-box-variational-inference">NIPS
+            2017</a>&nbsp;|
+          <a class="icon external" target="_blank" href="https://arxiv.org/abs/1709.07433">arXiv:1709.07433</a></li>
+        <li>G. Ji, R. Bamler, E.B. Sudderth, and S. Mandt,<br>
+          <strong>Bayesian Paragraph Vectors</strong><br>
+          <a class="icon pdf" href="files/ji-bayesian-paragraph-vectors-2017.pdf">PDF</a>&nbsp;|
+          <a class="icon external" target="_blank" href="http://approximateinference.org/accepted/">AABI Workshop at
+            NIPS
+            2017</a>&nbsp;|
+          <a class="icon external" target="_blank" href="https://arxiv.org/abs/1711.03946">arXiv:1711.03946</a></li>
+        <li>R. Bamler and S. Mandt,<br>
+          <strong>Dynamic Word Embeddings</strong><br>
+          <a class="icon pdf" href="files/bamler-dynamic-word-embeddings-icml-2017.pdf">PDF</a>&nbsp;|
+          <a class="icon external" target="_blank" href="http://proceedings.mlr.press/v70/bamler17a.html">ICML
+            2017</a>&nbsp;|
+          <a class="icon external" target="_blank" href="https://arxiv.org/abs/1702.08359">arXiv:1702.08359</a>&nbsp;|
+          <a class="icon video" target="_blank" href="https://youtu.be/2uQ6bgemuLw">promotional video
+            (3&nbsp;min.)</a>&nbsp;|
+          <a class="icon video" target="_blank" href="https://vimeo.com/240776794">conference talk (17&nbsp;min.)</a>
+        </li>
+        <li>R. Bamler and S. Mandt,<br>
+          <strong>Structured Black Box Variational Inference for Latent Time Series Models</strong><br>
+          <a class="icon pdf" href="files/bamler-structured-bbvi-tsw-2017.pdf">PDF</a>&nbsp;|
+          <a class="icon external" target="_blank" href="http://roseyu.com/time-series-workshop/#papers">Time Series
+            Workshop at ICML 2017</a>&nbsp;|
+          <a class="icon external" target="_blank" href="https://arxiv.org/abs/1707.01069">arXiv:1707.01069</a></li>
+      </ul>
+
+      <h2 id="physics-publications">Physics Publications</h2>
+      <ul>
+        <li>R. Bamler,<br>
+          <strong>Phase-Space Berry Phases in Chiral Magnets: Skyrmion Charge, Hall Effect, and Dynamics of Magnetic
+            Skyrmions</strong><br>
+          <a class="icon pdf" href="files/thesis-robert-bamler.pdf">PDF</a>&nbsp;|
+          <a class="icon external" target="_blank" href="http://kups.ub.uni-koeln.de/6916/">Ph.D. thesis, University of
+            Cologne (2016)</a></li>
+        <li>R. Bamler and A. Rosch,<br>
+          <strong>Equilibration and approximate conservation laws: Dipole oscillations and perfect drag of ultracold
+            atoms in a harmonic trap</strong><br>
+          <a class="icon pdf" href="files/bamler-equilibration-pra-2015.pdf">PDF</a>&nbsp;|
+          <a class="icon external" target="_blank"
+            href="http://journals.aps.org/pra/abstract/10.1103/PhysRevA.91.063604">Phys. Rev. A 91, 063604
+            (2015)</a>&nbsp;|
+          <a class="icon external" target="_blank" href="https://arxiv.org/abs/1504.03375">arXiv:1504.03375</a></li>
+        <li>F. Freimuth, R. Bamler, Y. Mokrousov, and A. Rosch,<br>
+          <strong>Phase-space Berry phases in chiral magnets: Dzyaloshinskii-Moriya interaction and the charge of
+            skyrmions</strong><br>
+          <a class="icon pdf" href="files/freimuth-skyrmion-charge-prb-2013.pdf">PDF</a>&nbsp;|
+          <a class="icon external" target="_blank" href="http://prb.aps.org/abstract/PRB/v88/i21/e214409">Phys. Rev. B
+            88, 214409 (2013)</a>&nbsp;|
+          <a class="icon external" target="_blank" href="https://arxiv.org/abs/1307.8085">arXiv:1307.8085</a></li>
+        <li>R. Ritz, M. Halder, C. Franz, A. Bauer, M. Wagner, R. Bamler, A. Rosch, and C. Pfleiderer,<br>
+          <strong>Giant generic topological Hall resistivity of MnSi under pressure</strong><br>
+          <a class="icon pdf" href="files/ritz-giant-prb-2013.pdf">PDF</a>&nbsp;|
+          <a class="icon external" target="_blank" href="http://prb.aps.org/abstract/PRB/v87/i13/e134424">Phys. Rev. B
+            87, 134424 (2013)</a></li>
+        <li>A. B. Sichert, R. Bamler, and J. L. van Hemmen,<br>
+          <strong>Hydrodynamic Object Recognition: When Multipoles Count</strong><br>
+          <a class="icon pdf" href="files/sichert-multipoles-prl-2009.pdf">PDF</a>&nbsp;|
+          <a class="icon external" target="_blank" href="http://prl.aps.org/abstract/PRL/v102/i5/e058104">Phys. Rev.
+            Lett. 102, 058104 (2009)</a></li>
+      </ul>
+
+      <h2 id="talks">Talks</h2>
+      <p>
+        Below is a selection of past talks for which either recordings or slides are available.
+        Corporate policy prevents publication of most talks that I gave while being employed by Disney Research.
+      </p>
+      <ul>
+        <li>
+          <strong>Marrying Big Data And Probabilistic Models With Variational Inference</strong><br>
+          German Aerospace Center (DLR), 2019<br>
+          <a class="icon slides" target="_blank"
+            href="https://docs.google.com/presentation/d/1QW5EKG3xIaLHMFCVURhzn6e4NYKG_e2xWh1KB3dkupI/edit?usp=sharing">Slides</a>
+        </li>
+        <li>
+          <strong>Dynamic Word Embeddings</strong><br>
+          ICML 2017<br>
+          <a class="icon video" target="_blank" href="https://vimeo.com/240776794">Video recording
+            (17&nbsp;min.)</a>&nbsp;|
+          <a class="icon pdf" href="files/bamler-dynamic-word-embeddings-icml-2017.pdf">Paper (PDF)</a>
+        </li>
+      </ul>
+    </section>
+  </article>
 </body>
 
 </html>
