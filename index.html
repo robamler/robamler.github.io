@@ -166,8 +166,7 @@
       clear: both;
       width: 100%;
       float: left;
-      margin-left: 0;
-      margin-right: 0;
+      margin: 0 0 3em 0;
     }
 
     p {
@@ -299,11 +298,16 @@
       color: inherit;
     }
 
+    .icon {
+      display: inline-block;
+    }
+
     .icon::before {
       font-family: FontAwesome;
       font-size: 90%;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      display: inline-block;
     }
 
     .social-links .icon::before {
@@ -312,7 +316,6 @@
 
     @media (min-width: 58em) {
       .social-links .icon::before {
-        display: inline-block;
         width: 1.6em;
         text-align: center;
       }
@@ -352,6 +355,31 @@
 
     .email::before {
       content: "\f199";
+    }
+
+    .page_content .icon {
+      margin-right: 1em;
+    }
+
+    .paper_authors::after {
+      content: ",";
+    }
+
+    .item_title {
+      font-weight: bold;
+    }
+
+    .item_title::after {
+      content: ",";
+    }
+
+    .venue {
+      color: #6c7175;
+      font-style: italic;
+    }
+
+    .venue::after {
+      content: ".";
     }
 
     div.videocontainer {
@@ -449,11 +477,11 @@
 
       <h2 id="machine-learning-publications">Machine Learning Publications</h2>
       <ul>
-        <li>R. Bamler, F. Salehi, and S. Mandt,<br>
-          <strong>Augmenting and Tuning Knowledge Graph Embeddings</strong><br>
-          <a class="icon pdf" href="files/bamler-salehi-mandt-tuning-kges-uai2019.pdf">PDF</a>&nbsp;|
-          UAI 2019 (accepted)&nbsp;|
-          <a class="icon external" target="_blank" href="https://arxiv.org/abs/1907.01068">arXiv:1907.01068</a>&nbsp;|
+        <li>
+          <div class="item_title">Augmenting and Tuning Knowledge Graph Embeddings</div>
+          <div class="paper_authors">R. Bamler, F. Salehi, and S. Mandt</div>
+          <div class="venue">UAI 2019</div>
+          <a class="icon pdf" href="files/bamler-salehi-mandt-tuning-kges-uai2019.pdf">PDF</a>
           <a class="icon video" href="#" onclick="toggle_video(event)">video abstract (1&nbsp;min.)</a>
           <div class="videocontainer">
             <video controls poster="videos/bamler-salehi-mandt-tuning-kges-uai2019.png">
@@ -464,15 +492,11 @@
             <a class="icon videolink" href="videos/bamler-salehi-mandt-tuning-kges-uai2019.mp4">Link to video</a>
           </div>
         </li>
-        <li>R. Bamler and S. Mandt,<br>
-          <strong>A Quantum Field Theory of Representation Learning</strong><br>
-          <a class="icon pdf" href="files/bamler-mandt-qft-of-representation-learning.pdf">PDF</a>&nbsp;|
-          <a class="icon external" target="_blank"
-            href="https://sites.google.com/view/icml2019phys4dl/accepted-papers">ICML
-            2019 Workshop on Theoretical
-            Physics for
-            Deep Learning</a>&nbsp;|
-          <a class="icon external" target="_blank" href="https://arxiv.org/abs/1907.02163">arXiv:1907.02163</a>&nbsp;|
+        <li>
+          <div class="item_title">A Quantum Field Theory of Representation Learning</div>
+          <div class="paper_authors">R. Bamler and S. Mandt</div>
+          <div class="venue">ICML 2019 Workshop on Theoretical Physics for Deep Learning</div>
+          <a class="icon pdf" href="files/bamler-mandt-qft-of-representation-learning.pdf">PDF</a>
           <a class="icon video" href="#" onclick="toggle_video(event)">video abstract (4&nbsp;min.)</a>
           <div class="videocontainer">
             <video controls poster="videos/bamler-mandt-qft-of-representation-learning.png">
@@ -483,77 +507,77 @@
             <a class="icon videolink" href="videos/bamler-mandt-qft-of-representation-learning.mp4">Link to video</a>
           </div>
         </li>
-        <li>R. Bamler and S. Mandt,<br>
-          <strong>Improving Optimization for Models With Continuous Symmetry Breaking</strong><br>
-          <a class="icon pdf" href="files/bamler-goldstone-gd-icml-2018.pdf">PDF</a>&nbsp;|
-          <a class="icon external" target="_blank" href="http://proceedings.mlr.press/v80/bamler18a.html">ICML
-            2018</a>&nbsp;|
-          <a class="icon external" target="_blank" href="https://arxiv.org/abs/1803.03234">arXiv:1803.03234</a></li>
-        <li>R. Bamler, C. Zhang, M. Opper, and S. Mandt,<br>
-          <strong>Perturbative Black Box Variational Inference</strong><br>
-          <a class="icon pdf" href="files/bamler-pbbvi-nips-2017.pdf">PDF</a>&nbsp;|
-          <a class="icon external" target="_blank"
-            href="https://papers.nips.cc/paper/7093-perturbative-black-box-variational-inference">NIPS
-            2017</a>&nbsp;|
-          <a class="icon external" target="_blank" href="https://arxiv.org/abs/1709.07433">arXiv:1709.07433</a></li>
-        <li>G. Ji, R. Bamler, E.B. Sudderth, and S. Mandt,<br>
-          <strong>Bayesian Paragraph Vectors</strong><br>
-          <a class="icon pdf" href="files/ji-bayesian-paragraph-vectors-2017.pdf">PDF</a>&nbsp;|
-          <a class="icon external" target="_blank" href="http://approximateinference.org/accepted/">AABI Workshop at
-            NIPS
-            2017</a>&nbsp;|
-          <a class="icon external" target="_blank" href="https://arxiv.org/abs/1711.03946">arXiv:1711.03946</a></li>
-        <li>R. Bamler and S. Mandt,<br>
-          <strong>Dynamic Word Embeddings</strong><br>
-          <a class="icon pdf" href="files/bamler-dynamic-word-embeddings-icml-2017.pdf">PDF</a>&nbsp;|
-          <a class="icon external" target="_blank" href="http://proceedings.mlr.press/v70/bamler17a.html">ICML
-            2017</a>&nbsp;|
-          <a class="icon external" target="_blank" href="https://arxiv.org/abs/1702.08359">arXiv:1702.08359</a>&nbsp;|
+        <li>
+          <div class="item_title">Improving Optimization for Models With Continuous Symmetry Breaking</div>
+          <div class="paper_authors">R. Bamler and S. Mandt</div>
+          <div class="venue">ICML 2018</div>
+          <a class="icon pdf" href="files/bamler-goldstone-gd-icml-2018.pdf">PDF</a>
+        </li>
+        <li>
+          <div class="item_title">Perturbative Black Box Variational Inference</div>
+          <div class="paper_authors">R. Bamler, C. Zhang, M. Opper, and S. Mandt</div>
+          <div class="venue">NIPS 2017</div>
+          <a class="icon pdf" href="files/bamler-pbbvi-nips-2017.pdf">PDF</a>
+        </li>
+        <li>
+          <div class="item_title">Bayesian Paragraph Vectors</div>
+          <div class="paper_authors">G. Ji, R. Bamler, E.B. Sudderth, and S. Mandt</div>
+          <div class="venue">AABI Workshop at NIPS 2017</div>
+          <a class="icon pdf" href="files/ji-bayesian-paragraph-vectors-2017.pdf">PDF</a>
+        </li>
+        <li>
+          <div class="item_title">Dynamic Word Embeddings</div>
+          <div class="paper_authors">R. Bamler and S. Mandt</div>
+          <div class="venue">ICML 2017</div>
+          <a class="icon pdf" href="files/bamler-dynamic-word-embeddings-icml-2017.pdf">PDF</a>
           <a class="icon video" target="_blank" href="https://youtu.be/2uQ6bgemuLw">promotional video
-            (3&nbsp;min.)</a>&nbsp;|
+            (3&nbsp;min.)</a>
           <a class="icon video" target="_blank" href="https://vimeo.com/240776794">conference talk (17&nbsp;min.)</a>
         </li>
-        <li>R. Bamler and S. Mandt,<br>
-          <strong>Structured Black Box Variational Inference for Latent Time Series Models</strong><br>
-          <a class="icon pdf" href="files/bamler-structured-bbvi-tsw-2017.pdf">PDF</a>&nbsp;|
-          <a class="icon external" target="_blank" href="http://roseyu.com/time-series-workshop/#papers">Time Series
-            Workshop at ICML 2017</a>&nbsp;|
-          <a class="icon external" target="_blank" href="https://arxiv.org/abs/1707.01069">arXiv:1707.01069</a></li>
+        <li>
+          <div class="item_title">Structured Black Box Variational Inference for Latent Time Series Models</div>
+          <div class="paper_authors">R. Bamler and S. Mandt</div>
+          <div class="venue">Time Series Workshop at ICML 2017</div>
+          <a class="icon pdf" href="files/bamler-structured-bbvi-tsw-2017.pdf">PDF</a>
+        </li>
       </ul>
 
       <h2 id="physics-publications">Physics Publications</h2>
       <ul>
-        <li>R. Bamler,<br>
-          <strong>Phase-Space Berry Phases in Chiral Magnets: Skyrmion Charge, Hall Effect, and Dynamics of Magnetic
-            Skyrmions</strong><br>
-          <a class="icon pdf" href="files/thesis-robert-bamler.pdf">PDF</a>&nbsp;|
-          <a class="icon external" target="_blank" href="http://kups.ub.uni-koeln.de/6916/">Ph.D. thesis, University of
-            Cologne (2016)</a></li>
-        <li>R. Bamler and A. Rosch,<br>
-          <strong>Equilibration and approximate conservation laws: Dipole oscillations and perfect drag of ultracold
-            atoms in a harmonic trap</strong><br>
-          <a class="icon pdf" href="files/bamler-equilibration-pra-2015.pdf">PDF</a>&nbsp;|
-          <a class="icon external" target="_blank"
-            href="http://journals.aps.org/pra/abstract/10.1103/PhysRevA.91.063604">Phys. Rev. A 91, 063604
-            (2015)</a>&nbsp;|
-          <a class="icon external" target="_blank" href="https://arxiv.org/abs/1504.03375">arXiv:1504.03375</a></li>
-        <li>F. Freimuth, R. Bamler, Y. Mokrousov, and A. Rosch,<br>
-          <strong>Phase-space Berry phases in chiral magnets: Dzyaloshinskii-Moriya interaction and the charge of
-            skyrmions</strong><br>
-          <a class="icon pdf" href="files/freimuth-skyrmion-charge-prb-2013.pdf">PDF</a>&nbsp;|
-          <a class="icon external" target="_blank" href="http://prb.aps.org/abstract/PRB/v88/i21/e214409">Phys. Rev. B
-            88, 214409 (2013)</a>&nbsp;|
-          <a class="icon external" target="_blank" href="https://arxiv.org/abs/1307.8085">arXiv:1307.8085</a></li>
-        <li>R. Ritz, M. Halder, C. Franz, A. Bauer, M. Wagner, R. Bamler, A. Rosch, and C. Pfleiderer,<br>
-          <strong>Giant generic topological Hall resistivity of MnSi under pressure</strong><br>
-          <a class="icon pdf" href="files/ritz-giant-prb-2013.pdf">PDF</a>&nbsp;|
-          <a class="icon external" target="_blank" href="http://prb.aps.org/abstract/PRB/v87/i13/e134424">Phys. Rev. B
-            87, 134424 (2013)</a></li>
-        <li>A. B. Sichert, R. Bamler, and J. L. van Hemmen,<br>
-          <strong>Hydrodynamic Object Recognition: When Multipoles Count</strong><br>
-          <a class="icon pdf" href="files/sichert-multipoles-prl-2009.pdf">PDF</a>&nbsp;|
-          <a class="icon external" target="_blank" href="http://prl.aps.org/abstract/PRL/v102/i5/e058104">Phys. Rev.
-            Lett. 102, 058104 (2009)</a></li>
+        <li>
+          <div class="item_title">Phase-Space Berry Phases in Chiral Magnets: Skyrmion Charge, Hall Effect, and
+            Dynamics of Magnetic Skyrmions</div>
+          <div class="paper_authors">R. Bamler</div>
+          <div class="venue">Ph.D. thesis, University of Cologne (2016)</div>
+          <a class="icon pdf" href="files/thesis-robert-bamler.pdf">PDF</a>
+        </li>
+        <li>
+          <div class="item_title">Equilibration and approximate conservation laws: Dipole oscillations and perfect drag
+            of ultracold atoms in a harmonic trap</div>
+          <div class="paper_authors">R. Bamler and A. Rosch</div>
+          <div class="venue">Phys. Rev. A 91, 063604 (2015)</div>
+          <a class="icon pdf" href="files/bamler-equilibration-pra-2015.pdf">PDF</a>
+        </li>
+        <li>
+          <div class="item_title">Phase-space Berry phases in chiral magnets: Dzyaloshinskii-Moriya interaction and the
+            charge of skyrmions</div>
+          <div class="paper_authors">F. Freimuth, R. Bamler, Y. Mokrousov, and A. Rosch</div>
+          <div class="venue">Phys. Rev. B 88, 214409 (2013)</div>
+          <a class="icon pdf" href="files/freimuth-skyrmion-charge-prb-2013.pdf">PDF</a>
+        </li>
+        <li>
+          <div class="item_title">Giant generic topological Hall resistivity of MnSi under pressure</div>
+          <div class="paper_authors">R. Ritz, M. Halder, C. Franz, A. Bauer, M. Wagner, R. Bamler, A. Rosch, and C.
+            Pfleiderer</div>
+          <div class="venue">Phys. Rev. B 87, 134424 (2013)</div>
+          <a class="icon pdf" href="files/ritz-giant-prb-2013.pdf">PDF</a>
+        </li>
+        <li>
+          <div class="item_title">Hydrodynamic Object Recognition: When Multipoles Count</div>
+          <div class="paper_authors">A. B. Sichert, R. Bamler, and J. L. van Hemmen</div>
+          <div class="venue">Phys. Rev. Lett. 102, 058104 (2009)</div>
+          <a class="icon pdf" href="files/sichert-multipoles-prl-2009.pdf">PDF</a>
+        </li>
       </ul>
 
       <h2 id="talks">Talks</h2>
@@ -563,16 +587,16 @@
       </p>
       <ul>
         <li>
-          <strong>Marrying Big Data And Probabilistic Models With Variational Inference</strong><br>
-          German Aerospace Center (DLR), 2019<br>
+          <div class="item_title">Marrying Big Data And Probabilistic Models With Variational Inference</div>
+          <div class="venue">German Aerospace Center (DLR), 2019</div>
           <a class="icon slides" target="_blank"
             href="https://docs.google.com/presentation/d/1QW5EKG3xIaLHMFCVURhzn6e4NYKG_e2xWh1KB3dkupI/edit?usp=sharing">Slides</a>
         </li>
         <li>
-          <strong>Dynamic Word Embeddings</strong><br>
-          ICML 2017<br>
+          <div class="item_title">Dynamic Word Embeddings</div>
+          <div class="venue">ICML 2017</div>
           <a class="icon video" target="_blank" href="https://vimeo.com/240776794">Video recording
-            (17&nbsp;min.)</a>&nbsp;|
+            (17&nbsp;min.)</a>
           <a class="icon pdf" href="files/bamler-dynamic-word-embeddings-icml-2017.pdf">Paper (PDF)</a>
         </li>
       </ul>
