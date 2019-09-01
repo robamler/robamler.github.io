@@ -162,11 +162,16 @@
       }
     }
 
-    .page .page_content {
+    .page_content {
       clear: both;
       width: 100%;
       float: left;
-      margin: 0 0 3em 0;
+    }
+
+    footer {
+      padding: 2em 0 1em 0;
+      font-size: 75%;
+      opacity: 0.7;
     }
 
     p {
@@ -359,6 +364,10 @@
 
     .page_content .icon {
       margin-right: 1em;
+    }
+
+    .page_content footer .icon {
+      margin: 0;
     }
 
     .paper_authors::after {
@@ -600,6 +609,11 @@
           <a class="icon pdf" href="files/bamler-dynamic-word-embeddings-icml-2017.pdf">Paper (PDF)</a>
         </li>
       </ul>
+      <footer>
+        Page layout partially based on <a class="icon external" target="_blank"
+          href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>
+        (&copy;&nbsp;2016 Michael Rose, see <a href="LICENSE.txt">license</a>).
+      </footer>
     </section>
   </article>
 </body>
