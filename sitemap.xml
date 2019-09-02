@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+    xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    <url>
+        <loc>https://robamler.github.io</loc>
+        <video:video>
+            <video:thumbnail_loc>https://robamler.github.io/videos/bamler-salehi-mandt-tuning-kges-uai2019.png</video:thumbnail_loc>
+            <video:title>Augmenting and Tuning Knowledge Graph Embeddings</video:title>
+            <video:description>Video abstract of our paper at UAI 2019. By Robert Bamler, Farnood Salehi, and Stephan Mandt.</video:description>
+            <video:content_loc>https://robamler.github.io/videos/bamler-salehi-mandt-tuning-kges-uai2019.mp4</video:content_loc>
+            <video:duration>74</video:duration>
+            <video:requires_subscription>no</video:requires_subscription>
+            <video:live>no</video:live>
+        </video:video>
+        <video:video>
+            <video:thumbnail_loc>https://robamler.github.io/videos/bamler-mandt-qft-of-representation-learning.png</video:thumbnail_loc>
+            <video:title>A Quantum Field Theory of Representation Learning</video:title>
+            <video:description>Video abstract of our paper at the ICML 2019 Workshop on Theoretical Physics for Deep Learning. By Robert Bamler and Stephan Mandt.</video:description>
+            <video:content_loc>https://robamler.github.io/videos/bamler-mandt-qft-of-representation-learning.mp4</video:content_loc>
+            <video:duration>257</video:duration>
+            <video:requires_subscription>no</video:requires_subscription>
+            <video:live>no</video:live>
+        </video:video>
+        <video:video>
+            <video:thumbnail_loc>https://i.vimeocdn.com/video/664165990.jpg?mw=1500&amp;mh=1125&amp;q=70</video:thumbnail_loc>
+            <video:title>Dynamic Word Embeddings -- Conference Talk</video:title>
+            <video:description>Talk at ICML 2017, presenting our paper "Dynamic Word Embeddings". By Robert Bamler and Stephan Mandt.</video:description>
+            <video:player_loc allow_embed="yes">https://player.vimeo.com/video/240776794?autoplay=1</video:player_loc>
+            <video:duration>173</video:duration>
+            <video:requires_subscription>no</video:requires_subscription>
+            <video:live>no</video:live>
+        </video:video>
+        <video:video>
+            <video:thumbnail_loc>https://img.youtube.com/vi/2uQ6bgemuLw/maxresdefault.jpg</video:thumbnail_loc>
+            <video:title>Dynamic Word Embeddings -- Promotional Video</video:title>
+            <video:description>Non-technical promotional video for our ICML 2017 paper "Dynamic Word Embeddings". By Robert Bamler and Stephan Mandt.</video:description>
+            <video:player_loc allow_embed="yes">https://www.youtube.com/embed/2uQ6bgemuLw</video:player_loc>
+            <video:duration>1023</video:duration>
+            <video:requires_subscription>no</video:requires_subscription>
+            <video:live>no</video:live>
+        </video:video>
+    </url>
+</urlset>
