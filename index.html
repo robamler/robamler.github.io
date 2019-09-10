@@ -339,6 +339,10 @@
       content: "\f01d\00a0";
     }
 
+    .close::before {
+      content: "\f05c\00a0";
+    }
+
     .videolink::before {
       content: "\f1c8\00a0";
     }
@@ -430,15 +434,26 @@
       if (container.style.display === 'block') {
         video.pause();
         container.style.display = 'none';
-        link.innerText = 'video abstract';
+        link.classList.add('video');
+        link.classList.remove('close');
+        link.innerText = link.getAttribute("data-original-text");
       } else {
+        link.setAttribute("data-original-text", link.innerText);
+        link.classList.add('close');
+        link.classList.remove('video');
         link.innerText = 'hide video';
+
         var all_videos = document.getElementsByTagName('video');
         for (var i = 0; i < all_videos.length; i += 1) {
           if (all_videos[i] !== video) {
             all_videos[i].pause();
           }
         }
+
+        video.onplaying = function () {
+          container.scrollIntoView({ block: 'nearest' });
+          video.onplaying = undefined;
+        };
         container.style.display = 'block';
         video.play();
       }
