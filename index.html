@@ -308,7 +308,8 @@
       display: inline-block;
     }
 
-    .icon::before {
+    .icon::before,
+    .inline-icon::before {
       font-family: FontAwesome;
       font-size: 90%;
       -webkit-font-smoothing: antialiased;
@@ -565,20 +566,34 @@
       <h1 class="page_title">Robert Bamler</h1>
     </header>
     <section class="page_content">
-      <p>I am a postdoctoral researcher at <a href="https://www.ics.uci.edu/">University of California at Irvine
+      <p>
+        I am a postdoctoral researcher at <a href="https://www.ics.uci.edu/">University of California at Irvine
           (UCI)</a>.
         I develop statistical machine learning methods that can detect subtle signals in noisy data sets.
         My work on probabilistic embedding models combines representation learning with the invention of specialized
         scalable approximate Bayesian inference algorithms, often drawing on ideas from my background in statistical
-        physics.</p>
-      <p>I joined UCI in December of 2018, and I work in the statistical machine learning group lead by <a
+        physics.
+      </p>
+      <p>
+        <strong>Representative publications</strong> include
+        <a class="inline-icon pdf" href="files/bamler-pbbvi-nips-2017.pdf">improvements to black box variational
+          inference (BBVI)</a>, applications of BBVI to
+        <a class="inline-icon pdf" href="files/bamler-dynamic-word-embeddings-icml-2017.pdf">time series models</a>, to
+        <a class="inline-icon pdf" href="files/yang-bayesian-ac-2020.pdf">deep neural data compression</a>, and to
+        <a class="inline-icon pdf" href="files/jirasek-ml-in-td-2020.pdf">natural sciences</a>, and
+        <a class="inline-icon pdf" href="files/bamler-goldstone-gd-icml-2018.pdf">resource efficient learning
+          algorithms</a>.
+      </p>
+      <p>
+        I joined UCI in December of 2018, and I work in the statistical machine learning group lead by <a
           href="http://stephanmandt.com/">Stephan Mandt</a>.
         From 2016 to 2018, I was a postdoctoral researcher at <a href="https://www.disneyresearch.com/">Disney
           Research</a>.
         I received my PhD in theoretical statistical and quantum physics from <a
           href="http://www.thp.uni-koeln.de/">University of Cologne</a> in 2016, advised by <a
           href="http://www.thp.uni-koeln.de/rosch/A_Rosch.html">Achim Rosch</a> and with support from <a
-          href="https://www.telekom-stiftung.de/en">German Telekom Foundation</a>.</p>
+          href="https://www.telekom-stiftung.de/en">German Telekom Foundation</a>.
+      </p>
 
       <ul class="sitemap">
         <li><a class="icon down" href="#news">News</a></li>
@@ -614,7 +629,8 @@
           <tr>
             <th>12/2019</th>
             <td>
-              <div class="news-headline">ICLR has accepted our paper "<em>Extreme Classification via Adversarial Softmax
+              <div class="news-headline">ICLR has accepted our paper "<em>Extreme Classification via Adversarial
+                  Softmax
                   Approximation</em>".</div>
               <a class="icon pdf" href="files/bamler-mandt-adversarial-neg-sampling-iclr2020.pdf">PDF</a>
               <a class="icon video" href="#" onclick="toggle_video(event)">Video abstract (5&nbsp;min.)</a>
@@ -688,11 +704,13 @@
               <source src="videos/bamler-mandt-adversarial-neg-sampling-iclr2020.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-            <a class="icon videolink" href="videos/bamler-mandt-adversarial-neg-sampling-iclr2020.mp4">Link to video</a>
+            <a class="icon videolink" href="videos/bamler-mandt-adversarial-neg-sampling-iclr2020.mp4">Link to
+              video</a>
           </div>
         </li>
         <li>
-          <div class="item_title">Tightening Bounds for Variational Inference by Revisiting Perturbation Theory</div>
+          <div class="item_title">Tightening Bounds for Variational Inference by Revisiting Perturbation Theory
+          </div>
           <div class="paper_authors">R. Bamler, C. Zhang, M. Opper, and S. Mandt</div>
           <div class="venue">J. Stat. Mech. (2019) 124004</div>
           <a class="icon pdf" href="files/bamler-vi-by-revisiting-perturbation-theory-jstat2019.pdf">PDF</a>
@@ -726,7 +744,8 @@
               <source src="videos/bamler-mandt-qft-of-representation-learning.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-            <a class="icon videolink" href="videos/bamler-mandt-qft-of-representation-learning.mp4">Link to video</a>
+            <a class="icon videolink" href="videos/bamler-mandt-qft-of-representation-learning.mp4">Link to
+              video</a>
           </div>
         </li>
         <li>
@@ -742,7 +761,8 @@
           <a class="icon pdf" href="files/bamler-dynamic-word-embeddings-icml-2017.pdf">PDF</a>
           <a class="icon video" target="_blank" href="https://youtu.be/2uQ6bgemuLw">Promotional video
             (3&nbsp;min.)</a>
-          <a class="icon video" target="_blank" href="https://vimeo.com/240776794">Conference talk (17&nbsp;min.)</a>
+          <a class="icon video" target="_blank" href="https://vimeo.com/240776794">Conference talk
+            (17&nbsp;min.)</a>
         </li>
       </ul>
 
@@ -756,14 +776,16 @@
           <a class="icon pdf" href="files/thesis-robert-bamler.pdf">PDF</a>
         </li>
         <li>
-          <div class="item_title">Equilibration and approximate conservation laws: Dipole oscillations and perfect drag
+          <div class="item_title">Equilibration and approximate conservation laws: Dipole oscillations and perfect
+            drag
             of ultracold atoms in a harmonic trap</div>
           <div class="paper_authors">R. Bamler and A. Rosch</div>
           <div class="venue">Phys. Rev. A 91, 063604 (2015)</div>
           <a class="icon pdf" href="files/bamler-equilibration-pra-2015.pdf">PDF</a>
         </li>
         <li>
-          <div class="item_title">Phase-space Berry phases in chiral magnets: Dzyaloshinskii-Moriya interaction and the
+          <div class="item_title">Phase-space Berry phases in chiral magnets: Dzyaloshinskii-Moriya interaction and
+            the
             charge of skyrmions</div>
           <div class="paper_authors">F. Freimuth, R. Bamler, Y. Mokrousov, and A. Rosch</div>
           <div class="venue">Phys. Rev. B 88, 214409 (2013)</div>
@@ -805,7 +827,8 @@
               <source src="videos/bamler-mandt-adversarial-neg-sampling-iclr2020.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-            <a class="icon videolink" href="videos/bamler-mandt-adversarial-neg-sampling-iclr2020.mp4">Link to video</a>
+            <a class="icon videolink" href="videos/bamler-mandt-adversarial-neg-sampling-iclr2020.mp4">Link to
+              video</a>
           </div>
         </li>
         <li>
@@ -853,7 +876,8 @@
               <source src="videos/bamler-mandt-qft-of-representation-learning.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-            <a class="icon videolink" href="videos/bamler-mandt-qft-of-representation-learning.mp4">Link to video</a>
+            <a class="icon videolink" href="videos/bamler-mandt-qft-of-representation-learning.mp4">Link to
+              video</a>
           </div>
         </li>
         <li>
