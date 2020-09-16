@@ -54,7 +54,7 @@
     }
 
     html {
-      background-color: #fff;
+      background: #fff;
       font-size: 16px;
       -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -130,11 +130,11 @@
       margin-bottom: 1.3em;
     }
 
-    ul li {
+    ul>li {
       margin-bottom: 0.7em;
     }
 
-    li ul {
+    li>ul {
       margin-top: 0.5em;
     }
 
@@ -490,6 +490,41 @@
         content: "\a0—\a0";
       }
     }
+
+    @media (prefers-color-scheme: dark) {
+      html {
+        background: #333;
+      }
+
+      body {
+        color: white;
+      }
+
+      a {
+        color: #89b4f4;
+      }
+
+      a:visited {
+        color: #bdaaf2;
+      }
+
+      .venue {
+        color: #bcc1c6;
+      }
+
+      .timeline>tbody>tr,
+      .timeline>tbody>tr>th {
+        color: #bcc1c6;
+      }
+
+      .timeline>tbody>tr>td {
+        color: white;
+      }
+
+      .social-links a {
+        color: inherit;
+      }
+    }
   </style>
 
   <script>
@@ -598,65 +633,75 @@
           <tr>
             <th>5/2020</th>
             <td>
-              <div class="news-headline">ICML has accepted our paper "<em>Variable-Bitrate Neural Compression via
-                  Bayesian Arithmetic Coding</em>".</div>
-              <a class="icon pdf" href="files/yang-bayesian-ac-2020.pdf">PDF</a>
+              ICML has accepted our paper "<em>Variable-Bitrate Neural Compression via
+                Bayesian Arithmetic Coding</em>".
+              <div>
+                <a class="icon pdf" href="files/yang-bayesian-ac-2020.pdf">PDF</a>
+              </div>
             </td>
           </tr>
           <tr>
             <th>1/2020</th>
             <td>
-              <div class="news-headline">The Journal of Physical Chemistry Letters has published our article
-                "<em>Machine Learning in Thermodynamics: Prediction of Activity Coefficients by Matrix
-                  Completion</em>"</div>
-              <a class="icon pdf" href="files/jirasek-ml-in-td-2020.pdf">PDF</a>
-              <a class="icon external" target="_blank"
-                href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.9b03657">Journal website</a>
-            </td>
-          </tr>
-          <tr>
-            <th>12/2019</th>
-            <td>
-              <div class="news-headline">ICLR has accepted our paper "<em>Extreme Classification via Adversarial
-                  Softmax Approximation</em>".</div>
-              <a class="icon pdf" href="files/bamler-mandt-adversarial-neg-sampling-iclr2020.pdf">PDF</a>
-              <a class="icon video" href="#" onclick="toggle_video(event)">Video abstract (5&nbsp;min.)</a>
-              <a class="icon slides" target="_blank"
-                href="https://docs.google.com/presentation/d/1-Hfu8JXGgVtVrfEl3t992divXAn0sr4BjwViF5ZwUWQ/edit?usp=sharing">Slides</a>
-              <div class="videocontainer">
-                <video controls poster="videos/bamler-mandt-adversarial-neg-sampling-iclr2020.png">
-                  <source src="videos/bamler-mandt-adversarial-neg-sampling-iclr2020.webm" type="video/webm">
-                  <source src="videos/bamler-mandt-adversarial-neg-sampling-iclr2020.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <a class="icon videolink" href="videos/bamler-mandt-adversarial-neg-sampling-iclr2020.mp4">Link to
-                  video</a>
+              The Journal of Physical Chemistry Letters has published our article
+              "<em>Machine Learning in Thermodynamics: Prediction of Activity Coefficients by Matrix
+                Completion</em>"
+              <div>
+                <a class="icon pdf" href="files/jirasek-ml-in-td-2020.pdf">PDF</a>
+                <a class="icon external" target="_blank"
+                  href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.9b03657">Journal website</a>
               </div>
             </td>
           </tr>
           <tr>
             <th>12/2019</th>
             <td>
-              <div class="news-headline">A JSTAT special edition on machine learning has published our article
-                "<em>Tightening Bounds for Variational Inference by Revisiting Perturbation
-                  Theory</em>".</div>
-              <div class="venue">J. Stat. Mech. (2019) 124004</div>
-              <a class="icon pdf" href="files/bamler-vi-by-revisiting-perturbation-theory-jstat2019.pdf">PDF</a>
-              <a class="icon external" target="_blank"
-                href="https://iopscience.iop.org/article/10.1088/1742-5468/ab43d3">Journal website</a>
+              ICLR has accepted our paper "<em>Extreme Classification via Adversarial
+                Softmax Approximation</em>".
+              <div>
+                <a class="icon pdf" href="files/bamler-mandt-adversarial-neg-sampling-iclr2020.pdf">PDF</a>
+                <a class="icon video" href="#" onclick="toggle_video(event)">Video abstract (5&nbsp;min.)</a>
+                <a class="icon slides" target="_blank"
+                  href="https://docs.google.com/presentation/d/1-Hfu8JXGgVtVrfEl3t992divXAn0sr4BjwViF5ZwUWQ/edit?usp=sharing">Slides</a>
+                <div class="videocontainer">
+                  <video controls poster="videos/bamler-mandt-adversarial-neg-sampling-iclr2020.png">
+                    <source src="videos/bamler-mandt-adversarial-neg-sampling-iclr2020.webm" type="video/webm">
+                    <source src="videos/bamler-mandt-adversarial-neg-sampling-iclr2020.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <a class="icon videolink" href="videos/bamler-mandt-adversarial-neg-sampling-iclr2020.mp4">Link to
+                    video</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>12/2019</th>
+            <td>
+              A JSTAT special edition on machine learning has published our article
+              "<em>Tightening Bounds for Variational Inference by Revisiting Perturbation
+                Theory</em>".
+              <div>
+                <div class="venue">J. Stat. Mech. (2019) 124004</div>
+                <a class="icon pdf" href="files/bamler-vi-by-revisiting-perturbation-theory-jstat2019.pdf">PDF</a>
+                <a class="icon external" target="_blank"
+                  href="https://iopscience.iop.org/article/10.1088/1742-5468/ab43d3">Journal website</a>
+              </div>
             </td>
           </tr>
           <tr>
             <th>9/2019</th>
             <td>
-              <div class="news-headline">A major German newspaper, <em>Süddeutsche Zeitung</em>, has published an
-                article about me.</div>
-              <a class="icon external" target="_blank"
-                href="https://www.sueddeutsche.de/muenchen/muenchen-kalifornien-forschung-apple-wikipedia-1.4591967">German
-                article</a>
-              <a class="icon external" target="_blank"
-                href="https://translate.google.com/translate?sl=auto&amp;tl=en&amp;u=https%3A%2F%2Fwww.sueddeutsche.de%2Fmuenchen%2Fmuenchen-kalifornien-forschung-apple-wikipedia-1.4591967">English
-                translation</a>
+              A major German newspaper, <em>Süddeutsche Zeitung</em>, has published an
+              article about me.
+              <div>
+                <a class="icon external" target="_blank"
+                  href="https://www.sueddeutsche.de/muenchen/muenchen-kalifornien-forschung-apple-wikipedia-1.4591967">German
+                  article</a>
+                <a class="icon external" target="_blank"
+                  href="https://translate.google.com/translate?sl=auto&amp;tl=en&amp;u=https%3A%2F%2Fwww.sueddeutsche.de%2Fmuenchen%2Fmuenchen-kalifornien-forschung-apple-wikipedia-1.4591967">English
+                  translation</a>
+              </div>
             </td>
           </tr>
         </tbody>
