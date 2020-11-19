@@ -81,6 +81,20 @@
       -ms-interpolation-mode: bicubic;
     }
 
+    .ut-logo {
+      font-size: 70%;
+      float: right;
+      margin: 0.2em -0.2em 0.7em 2.8em;
+      border: 0.2em solid white;
+      border-radius: 0.4em;
+    }
+
+    .ut-logo>img {
+      width: 10em;
+      height: 2.573em;
+      display: block;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -99,6 +113,10 @@
     @media (min-width: 58em) {
       body {
         display: table;
+      }
+
+      .ut-logo {
+        font-size: 100%;
       }
     }
 
@@ -506,6 +524,11 @@
         color: white;
       }
 
+      .ut-logo {
+        margin: 0.1em -0.5em 0.7em 2em;
+        border-width: 0.8em;
+      }
+
       a {
         color: #89b4f4;
       }
@@ -610,6 +633,7 @@
     </header>
     <section class="page_content">
       <p>
+        <a href="https://uni-tuebingen.de" class='ut-logo'><img src='ut-logo.png' alt='University of Tübingen'></a>
         I am a Professor of Data Science and Machine Learning at <a href="https://uni-tuebingen.de/">University of
           Tübingen</a>, Germany, and a member of the <a
           href="https://uni-tuebingen.de/en/research/core-research/cluster-of-excellence-machine-learning/home/">Cluster
