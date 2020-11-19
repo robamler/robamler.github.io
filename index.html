@@ -526,6 +526,11 @@
 
     .highlight::after {
       content: "\a0🚀";
+      white-space: nowrap;
+    }
+
+    .nowrap {
+      white-space: nowrap;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -664,7 +669,7 @@
           href="https://tuebingen.ai/">Tübingen AI Center</a>.
       </p>
       <p class="highlight">
-        Open positions available. Please see <a class="inline-icon down" href="#jobs">below</a>.
+        Open positions available, see <a class="inline-icon down nowrap" href="#jobs">below</a>.
       </p>
       <p>
         My group performs research on scalable approximate Bayesian inference methods (especially variational methods)
