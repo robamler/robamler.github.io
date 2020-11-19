@@ -348,27 +348,27 @@
     }
 
     .external::before {
-      content: "\f08e\00a0";
+      content: "\f08e\a0";
     }
 
     .pdf::before {
-      content: "\f1c1\00a0";
+      content: "\f1c1\a0";
     }
 
     .video::before {
-      content: "\f01d\00a0";
+      content: "\f01d\a0";
     }
 
     .close::before {
-      content: "\f05c\00a0";
+      content: "\f05c\a0";
     }
 
     .videolink::before {
-      content: "\f1c8\00a0";
+      content: "\f1c8\a0";
     }
 
     .slides::before {
-      content: "\f26c\00a0";
+      content: "\f26c\a0";
     }
 
     .googlescholar::before {
@@ -384,11 +384,15 @@
     }
 
     .email::before {
+      content: "\f003\a0";
+    }
+
+    .social-links .email::before {
       content: "\f199";
     }
 
     .down::before {
-      content: "\f063\00a0";
+      content: "\f063\a0";
     }
 
     .sitemap {
@@ -515,6 +519,15 @@
       }
     }
 
+    .highlight {
+      color: #ac0a0a;
+      font-weight: bold;
+    }
+
+    .highlight::after {
+      content: "\a0🚀";
+    }
+
     @media (prefers-color-scheme: dark) {
       html {
         background: #333;
@@ -552,6 +565,11 @@
 
       .social-links a {
         color: inherit;
+      }
+
+      .highlight,
+      .highlight:visited {
+        color: #ec6161;
       }
     }
   </style>
@@ -592,6 +610,24 @@
 
       link.blur();
     }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      var emailElements = document.getElementsByClassName('email');
+
+      function addAddr() {
+        for (var i = 0; i < emailElements.length; i += 1) {
+          if (emailElements[i].href.indexOf('@') < 0) {
+            emailElements[i].href = emailElements[i].href.replace('-guessthischaracter-', '@');
+          }
+        }
+      }
+
+      for (var i = 0; i < emailElements.length; i += 1) {
+        emailElements[i].onmouseover = addAddr;
+        emailElements[i].onclick = addAddr;
+        emailElements[i].onfocus = addAddr;
+      }
+    });
   </script>
 </head>
 
@@ -606,20 +642,7 @@
       </div>
     </div>
     <ul class="social-links">
-      <li><a class="icon email" id="emadr" href="mailto:robert.bamler-guessthischaracter-uni-tuebingen.de">Email</a>
-        <script>
-          var emadrEl = document.getElementById('emadr');
-
-          function emadr() {
-            if (emadrEl.href.indexOf('@') < 0) {
-              emadrEl.href = emadrEl.href.replace('-guessthischaracter-', '@');
-            }
-          }
-
-          emadrEl.onmouseover = emadr;
-          emadrEl.onclick = emadr;
-          emadrEl.onfocus = emadr;
-        </script>
+      <li><a class="icon email" href="mailto:robert.bamler-guessthischaracter-uni-tuebingen.de">Email</a>
       </li>
       <li><a class="icon googlescholar" href="https://scholar.google.com/citations?user=LwvdNAgAAAAJ">Google
           Scholar</a></li>
@@ -639,6 +662,9 @@
           href="https://uni-tuebingen.de/en/research/core-research/cluster-of-excellence-machine-learning/home/">Cluster
           of Excellence "Machine Learning: New Perspectives for Science"</a> and <a
           href="https://tuebingen.ai/">Tübingen AI Center</a>.
+      </p>
+      <p class="highlight">
+        Open positions available. Please see <a class="inline-icon down" href="#jobs">below</a>.
       </p>
       <p>
         My group performs research on scalable approximate Bayesian inference methods (especially variational methods)
@@ -662,11 +688,36 @@
       </p>
 
       <ul class="sitemap">
+        <li><a class="icon down" href="#jobs">Open Positions</a></li>
         <li><a class="icon down" href="#news">News</a></li>
         <li><a class="icon down" href="#publications">Machine Learning Publications</a></li>
         <li><a class="icon down" href="#physics-publications">Physics Publications</a></li>
         <li><a class="icon down" href="#talks">Talks &amp; Video Abstracts</a></li>
       </ul>
+
+      <h2 id="jobs" class="highlight">Open Positions</h2>
+      <p>
+        I am actively looking for PhD students and postdocs.
+        Please <a class="inline-icon email" href="mailto:robert.bamler-guessthischaracter-uni-tuebingen.de">reach out to
+          me</a> if you are interested.
+        Since my group performs research at the <em>intersection between models and algorithms</em>, applicants should
+        bring strong mathematical skills as well as substantial programming experience.
+        Ideally, you'd have a background in machine learning, statistics, computer science, natural sciences, or math.
+      </p>
+      <p>
+        Your research in this group will push the envelope in scalable Bayesian inference algorithms and deep
+        probabilistic models.
+        In addition to generating foundational insights, your work will have a direct impact on novel application
+        domains of statistical machine learning research:
+        open research projects evolve around applications to neural data and model compression, natural sciences, and
+        game theory in trustless decentralized networks such as blockchains.
+        You will be embedded in an extremely vibrant environment of machine learning research at <a
+          href="https://uni-tuebingen.de/">University of Tübingen</a>, the <a
+          href="https://uni-tuebingen.de/en/research/core-research/cluster-of-excellence-machine-learning/home/">Cluster
+          of Excellence "Machine Learning: New Perspectives for Science"</a>, and <a
+          href="https://tuebingen.ai/">Tübingen AI Center</a>, with strong ties to <a href="https://www.is.mpg.de/">Max
+          Planck Institute for Intelligent Systems</a>.
+      </p>
 
       <h2 id="news">News</h2>
       <table class="timeline">
@@ -678,13 +729,8 @@
               of Excellence "Machine Learning: New Perspectives for Science", and Tübingen AI Center.
               I am very excited to build up a new research group here at one of the most vibrant environments for
               machine learning research in Europe.
-              I'll post job openings soon, but feel free to reach out to me already if you're interested in a PhD or
-              postdoc position.
-              <div>
-                <a class="icon external" target="_blank"
-                  href="https://uni-tuebingen.de/en/research/core-research/cluster-of-excellence-machine-learning/research/research/cluster-research-groups/professorships/data-science-and-machine-learning/">More
-                  information on the Cluster website.</a>
-              </div>
+              Please <a class="inline-icon email" href="mailto:robert.bamler-guessthischaracter-uni-tuebingen.de">reach
+                out to me</a> if you are interested in joining my group as a PhD or postdoctoral researcher.
             </td>
           </tr>
           <tr>
