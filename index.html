@@ -583,16 +583,19 @@
       </div>
     </div>
     <ul class="social-links">
-      <li><a class="icon email" id="emadr" href="mailto:rbamler%20-AT-%20uci.edu">Email</a>
+      <li><a class="icon email" id="emadr" href="mailto:robert.bamler-guessthischaracter-uni-tuebingen.de">Email</a>
         <script>
-          a = 'lto:r';
-          b = 'gma';
-          c = '@';
-          d = 'obert.bamler';
-          e = 'il.c';
-          f = 'om';
-          g = 'mai' + a + d + c + b + e + f;
-          document.getElementById('emadr').href = g;
+          var emadrEl = document.getElementById('emadr');
+
+          function emadr() {
+            if (emadrEl.href.indexOf('@') < 0) {
+              emadrEl.href = emadrEl.href.replace('-guessthischaracter-', '@');
+            }
+          }
+
+          emadrEl.onmouseover = emadr;
+          emadrEl.onclick = emadr;
+          emadrEl.onfocus = emadr;
         </script>
       </li>
       <li><a class="icon googlescholar" href="https://scholar.google.com/citations?user=LwvdNAgAAAAJ">Google
