@@ -29,6 +29,7 @@
 
   <style>
     @font-face {
+
       font-family: ZwoWebPro;
       src: url(/fonts/zwo-web-pro-semilight-w04-regular.woff2) format('woff2'),
         url('/fonts/zwo-web-pro-semilight-w04-regular.woff') format('woff'),
@@ -75,14 +76,6 @@
       display: inline-block;
     }
 
-    .external::before {
-      content: "\f08e\a0";
-    }
-
-    .email::before {
-      content: "\f003\a0";
-    }
-
     ul.links {
       display: block;
       margin: 0;
@@ -92,6 +85,26 @@
     ul.links>li {
       display: inline-block;
       margin-right: 1em;
+    }
+
+    .external::before {
+      content: "\f08e\a0";
+    }
+
+    .email::before {
+      content: "\f003\a0";
+    }
+
+    .video::before {
+      content: "\f01d\a0";
+    }
+
+    .pdf::before {
+      content: "\f1c1\a0";
+    }
+
+    .zip::before {
+      content: "\f1c6\a0";
     }
 
     body {
@@ -125,7 +138,7 @@
       border-radius: 0.6em;
       padding: 0;
       width: 20em;
-      height: 9.6em;
+      height: 11em;
       font-family: ZwoWebPro;
     }
 
@@ -175,7 +188,8 @@
       line-height: 2.35ex;
     }
 
-    .topicOrg {
+    .topicOrg,
+    .topicLinks {
       margin-top: 0.4em;
       line-height: 2.35ex;
     }
@@ -295,6 +309,11 @@
         </div>
         <div class="topicOrg">
           <strong>In the tutorial</strong>, you'll implement your first deep learning based compressor.
+        </div>
+        <div class="topicLinks">
+          <a class="icon video" href="#">Video</a>
+          <a class="icon pdf" href="#">Lecture Notes</a>
+          <a class="icon zip" href="#">Problems</a>
         </div>
       </div>
       <div class="topicData">
