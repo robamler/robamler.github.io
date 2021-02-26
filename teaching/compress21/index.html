@@ -9,13 +9,36 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1.0">
   <style>
+    @font-face {
+      font-family: ZwoWebPro;
+      src: url(../../fonts/zwo-web-pro-semilight-w04-regular.woff2) format('woff2'),
+        url('../../fonts/zwo-web-pro-semilight-w04-regular.woff') format('woff'),
+        url('../../fonts/zwo-web-pro-semilight-w04-regular.ttf');
+    }
+
+    @font-face {
+      font-family: ZwoWebPro;
+      src: url(../../fonts/zwo-web-pro-semibold-w04-regular.woff2) format('woff2'),
+        url('../../fonts/zwo-web-pro-semibold-w04-regular.woff') format('woff'),
+        url('../../fonts/zwo-web-pro-semibold-w04-regular.ttf');
+      font-weight: bold;
+    }
+
+    @font-face {
+      font-family: ZwoWebPro;
+      src: url(../../fonts/zwo-web-pro-semilight-w04-italic.woff2) format('woff2'),
+        url('../../fonts/zwo-web-pro-semilight-w04-italic.woff') format('woff'),
+        url('../../fonts/zwo-web-pro-semilight-w04-italic.ttf');
+      font-style: italic;
+    }
+
     body {
       margin: 0;
       padding: 0;
       color: #494e52;
       font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
       line-height: 1.5;
-      max-width: 925px;
+      max-width: 1150px;
       margin-left: auto;
       margin-right: auto;
       clear: both;
@@ -23,14 +46,430 @@
       padding-left: 1em;
       padding-right: 1em;
     }
+
+    footer {
+      clear: both;
+      padding: 2em 0 1em 0;
+      font-size: 75%;
+      opacity: 0.7;
+    }
+
+    .topics {
+      margin: -0.5em;
+    }
+
+    .topic {
+      position: relative;
+      float: left;
+      margin: 0.5em;
+      background-color: #a51e37;
+      border-radius: 0.6em;
+      padding: 0;
+      width: 22em;
+      height: 9.6em;
+      font-family: ZwoWebPro;
+    }
+
+    .topicData {
+      color: #f7d4de;
+      text-align: center;
+      width: 4.3em;
+    }
+
+    .topicNumber {
+      font-weight: bold;
+      font-size: 320%;
+      margin: -0.22em 0 -0.24em 0;
+    }
+
+    .session {
+      margin-top: 0.4em;
+      line-height: 2.35ex;
+    }
+
+    .sessionType {
+      font-weight: bold;
+    }
+
+    .topicDescription {
+      background-color: #b4a069;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 4.3em;
+      padding: 0.3em 0.5em 0.2em 0.6em;
+      border-radius: 0.6em;
+    }
+
+    .topicDescription>h3 {
+      padding: 0;
+      margin: 0 0 0.4em 0;
+      font-size: 125%;
+      font-weight: bold;
+      line-height: 2.35ex;
+    }
+
+    .topicTeaser {
+      font-style: italic;
+      line-height: 2.35ex;
+    }
+
+    .topicOrg {
+      margin-top: 0.4em;
+      line-height: 2.35ex;
+    }
   </style>
 </head>
 
 <body>
   <h1 class="page_title">Data Compression With Deep Probabilistic Models</h1>
-  <p>Course by <a href="../../">Prof. Robert Bamler</a> at <a href="https://uni-tuebingen.de/">University of Tuebingen</a>.</p>
-  <p>Stay tuned, details coming soon. See below for a tentative schedule (click on image to enlarge).</p>
-  <p><a href="tentative-schedule.png"><img src="tentative-schedule.png" alt="tentative schedule" style="width:40em;height:22.5em"></a></p>
+  <p>Course by <a href="../../">Prof. Robert Bamler</a> at <a href="https://uni-tuebingen.de/">University of
+      Tuebingen</a>.</p>
+
+  <h2>At a Glance</h2>
+  <ul>
+    <li><strong>Mondays 16:15-17:45</strong> and <strong>Tuesdays 12:15-13:45</strong> on zoom.</li>
+    <li><strong>First lecture:</strong> Monday, 19 April; <strong>after that, lectures will be on Tuesdays</strong>, see
+      detailed <a href="#schedule">tentative schedule</a> below.
+    </li>
+    <li><strong>6 ECTS</strong> with grade based on group project (you may skip the group project if you don't need the
+      ECTS).</li>
+    <li>To encourage interactivity, neither the lectures nor the tutorials will be recorded. However, I'll provide
+      supplementary video material that repeats important concepts discussed in the lectures on the <a
+        href="https://www.youtube.com/channel/UCupmCsCA5CFXmm31PkUhEbA">YouTube channel “<em>Tübingen Machine
+          Learning</em>”</a>.</li>
+  </ul>
+
+  <h2>Links</h2>
+  <ul>
+    <li><a href="https://moodle.zdv.uni-tuebingen.de/course/view.php?id=1372">moodle</a></li>
+    <li><a href="https://ovidius.uni-tuebingen.de/ilias3/goto.php?target=cat_3030986&client_id=pr02">Ilias</a></li>
+    <li><a
+        href="https://alma.uni-tuebingen.de:443/alma/pages/startFlow.xhtml?_flowId=detailView-flow&unitId=56930&periodId=224">Alma</a>
+    </li>
+    <li><a href="../../">Contact lecturer</a></li>
+  </ul>
+
+  <h2 id="schedule">Tentative Schedule</h2>
+
+  <p>Details of the following schedule ar still subject to change.</p>
+
+  <div class="topics">
+    <div class="topic">
+      <div class="topicData">
+        <div class="topicNumber">0</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">19 April 2021</div>
+        </div>
+      </div>
+      <div class="topicDescription">
+        <h3>Preview</h3>
+        <div class="topicTeaser">
+          Find out what you will learn in this course: from the information theoreti&shy;cal foundations of
+          communication
+          to
+          concrete practical implementations of deep learning based compressors.
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicData">
+        <div class="topicNumber">1</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">20 April</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">26 April</div>
+        </div>
+      </div>
+      <div class="topicDescription">
+        <h3>Lossless Compression I: Symbol Codes</h3>
+        <div class="topicTeaser">
+          How can we compress a sequence of symbols, and what is the theoretical bound for lossless compression? We'll
+          encounter a term called “entropy”.
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicData">
+        <div class="topicNumber">2</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">27 April</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">3 May</div>
+        </div>
+      </div>
+      <div class="topicDescription">
+        <h3>Probability Theory I:<br>Discrete Random Variables</h3>
+        <div class="topicTeaser">
+          How can we model a simple data source, and what's this entropy thing?
+        </div>
+        <div class="topicOrg">
+          <strong>In the tutorial</strong>, you'll implement your first deep learning based compressor.
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicData">
+        <div class="topicNumber">3</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">4 May</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">10 May</div>
+        </div>
+      </div>
+      <div class="topicDescription">
+        <h3>A Primer on Deep<br>Generative Models</h3>
+        <div class="topicTeaser">
+          How can we model more complex data sources with deep generative models?
+        </div>
+        <div class="topicOrg">
+          <strong>In tutorial:</strong> form a team for your group project &amp; discuss suggested topics.
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicData">
+        <div class="topicNumber">4</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">11 May</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">17 May</div>
+        </div>
+      </div>
+      <div class="topicDescription">
+        <h3>Probability Theory II: Continuous Random Variables</h3>
+        <div class="topicTeaser">
+          How can we model the arrival time of a late bus? And why can we define only a “differential” entropy of this
+          random variable?
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicData">
+        <div class="topicNumber">5</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">18 May</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">31 May</div>
+        </div>
+      </div>
+      <div class="topicDescription">
+        <h3>A Primer on Scalable<br>Bayesian Inference</h3>
+        <div class="topicTeaser">
+          How can we quantify parameter un&shy;certainty in machine learning models?
+        </div>
+        <div class="topicOrg">
+          <strong>Deadline</strong> for finalizing team members and topic of your group project.
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicData">
+        <div class="topicNumber">6</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">1 June</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">7 June</div>
+        </div>
+      </div>
+      <div class="topicDescription">
+        <h3>Lossless Compression II: Stream Codes</h3>
+        <div class="topicTeaser">
+          We've already learned how to create an optimal symbol code, but can we do better than symbol codes? Yes, if
+          we're willing to think in fractional bits.
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicData">
+        <div class="topicNumber">7</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">8 June</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">14 June</div>
+        </div>
+      </div>
+      <div class="topicDescription">
+        <h3>Lossless Compression III: Modern Stream Codes</h3>
+        <div class="topicTeaser">
+          Learn how to “short sell” bits. No, not on the stock exchange. This simple trick recently lead to a fast new
+          stream code for complex models.
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicData">
+        <div class="topicNumber">8</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">15 June</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">21 June</div>
+        </div>
+      </div>
+      <div class="topicDescription">
+        <h3>The (Noisy-)Channel<br>Coding Theorem</h3>
+        <div class="topicTeaser">
+          How fast can we reliably transmit data over an unreliable channel? This gem of information theory will also
+          prepare us for lossy compression.
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicData">
+        <div class="topicNumber">9</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">22 June</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">28 June</div>
+        </div>
+      </div>
+      <div class="topicDescription">
+        <h3>Lossy Compression I:<br>Rate-Distortion Theory</h3>
+        <div class="topicTeaser">
+          How do we quantify lossy compression performance, what's its theoretical bound, and does the channel matter?
+        </div>
+        <div class="topicOrg">
+          <strong>Deadline</strong> for status report on project.
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicData">
+        <div class="topicNumber">10</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">29 June</div>
+        </div>
+      </div>
+      <div class="topicDescription">
+        <h3>Lossy Compression II:<br>Practical Lossy Compression</h3>
+        <div class="topicTeaser">
+          How do existing classical and machine learning based lossy codecs work?
+        </div>
+        <div class="topicOrg">
+          <strong>Instead of tutorial:</strong> individual appoint&shy;ments to discuss your group projects.
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicData">
+        <div class="topicNumber">11</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">6 July</div>
+        </div>
+      </div>
+      <div class="topicDescription">
+        <h3>Recent Advances in<br>Neural Compression</h3>
+        <div class="topicTeaser">
+          What are the latest trends and open research questions?
+        </div>
+        <div class="topicOrg">
+          <strong>Instead of tutorials:</strong> continuing with the group appointments.
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicData">
+        <div class="topicNumber">12</div>
+        <div class="session">
+          <div class="sessionType">Guest Lectures</div>
+          <div class="sessionDate">13 &amp; 19 July</div>
+        </div>
+      </div>
+      <div class="topicDescription">
+        <h3>Guest Stars</h3>
+        <div class="topicTeaser">
+          Two Pioneers of neural compression:
+        </div>
+        <div class="topicOrg">
+          <strong>Tue, 13 July:</strong> Dr. Christopher Schroers from DisneyResearch|Studios in Zurich
+        </div>
+        <div class="topicOrg">
+          <strong>Mon, 19 July:</strong> Prof. Dr. Stephan Mandt from University of California at Irvine
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicData">
+        <div class="topicNumber">13</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">20 July</div>
+        </div>
+      </div>
+      <div class="topicDescription">
+        <h3>Tips for Giving Presentations and for Scientific Writing</h3>
+        <div class="topicTeaser">
+          Presenting your group project next week and finalizing the written report should be a joy, not a pain! These
+          tips might help you.
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicData">
+        <div class="topicNumber">14</div>
+        <div class="session">
+          <div class="sessionType">Work&shy;shop</div>
+          <div class="sessionDate">26 &amp; 27 July</div>
+        </div>
+      </div>
+      <div class="topicDescription">
+        <h3>Group Project Presentations</h3>
+        <div class="topicTeaser">
+          The stage is yours! Let's celebrate your achievements in the group projects with a round of presentations and
+          demos, and with plenty of time for your questions and your feedback.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Font made from <a href="http://www.onlinewebfonts.com">www.onlinewebfonts.com</a> is licensed by CC BY 3.0
+  </footer>
+
 </body>
 
 </html>
