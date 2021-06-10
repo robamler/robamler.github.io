@@ -64,6 +64,18 @@
       font-style: normal;
     }
 
+    a {
+      color: #16288d
+    }
+
+    a:hover {
+      color: #2a3ca7
+    }
+
+    a:visited {
+      color: #57168d
+    }
+
     .icon {
       display: inline-block;
     }
@@ -76,7 +88,8 @@
       display: inline-block;
     }
 
-    ul.links {
+    ul.links,
+    ul.longlinks {
       display: block;
       margin: 0;
       padding: 0;
@@ -85,6 +98,11 @@
     ul.links>li {
       display: inline-block;
       margin-right: 1em;
+    }
+
+    ul.longlinks>li {
+      display: block;
+      margin: 0 0 0.7ex 2em;
     }
 
     .external::before {
@@ -113,6 +131,10 @@
 
     .chat::before {
       content: "\f086\a0";
+    }
+
+    .code::before {
+      content: "\f1c9\a0";
     }
 
     body {
@@ -253,13 +275,16 @@
         color: #f2f3f1;
       }
 
-      a,
-      a:visited {
-        color: #e8ece6;
+      a {
+        color: #ccd1ee
       }
 
       a:hover {
-        color: #fff;
+        color: #ced6ff
+      }
+
+      a:visited {
+        color: #ddd5f3
       }
 
       .doneWrapper {
@@ -313,16 +338,26 @@
         href="https://alma.uni-tuebingen.de:443/alma/pages/startFlow.xhtml?_flowId=detailView-flow&unitId=56930&periodId=224">Alma</a>
     </li>
     <li>
-      <a class="icon video" target="_blank"
-        href="https://www.youtube.com/playlist?list=PL05umP7R6ij0Mp1dW2HuXlb-UQIYnv8xK">Video Playlist</a>
-    </li>
-    <li>
       <a class="icon email" href="/">contact lecturer</a>
     </li>
     <li>
       <a class="icon chat" target="_blank" href="https://discord.com/channels/841437002582065172">discord</a>
     </li>
   </ul>
+
+  <h2>Additional Resources</h2>
+
+  <ul class="longlinks">
+    <li><a class="icon video" target="_blank"
+        href="https://www.youtube.com/playlist?list=PL05umP7R6ij0Mp1dW2HuXlb-UQIYnv8xK">full video playlist</a> (still
+      growing)</li>
+    <li><a class="icon pdf" target="_blank"
+        href="https://moodle.zdv.uni-tuebingen.de/pluginfile.php/177134/mod_folder/content/0/group-projects-suggestions.pdf?forcedownload=1">topic
+        suggestions for group projects</a> (requires moodle login)</li>
+    <li><a class="icon code" target="_blank" href="https://bamler-lab.github.io/constriction/">constriction</a>
+      (Python+Rust library of entropy coding primitives)</li>
+  </ul>
+
 
   <h2 id="schedule">Tentative Schedule &amp; Course Materials</h2>
 
@@ -545,7 +580,8 @@
         <div class="topicDescription">
           <h3>Stream Codes II: Arithmetic Coding and Range Coding</h3>
           <div class="topicTeaser">
-            A "bonus" video on a famous stream code with queue semantics while the problem set discusses the last missing piece of the ANS algorithm.
+            A "bonus" video on a famous stream code with queue semantics while the problem set discusses the last
+            missing piece of the ANS algorithm.
           </div>
         </div>
         <div class="topicData">
@@ -590,7 +626,8 @@
       <div class="topicDescription">
         <h3>Channel Coding Theorem and Theory of Lossy Compression</h3>
         <div class="topicTeaser">
-          Two final gems of information theory before we venture into more applied issues starting with the next session.
+          Two final gems of information theory before we venture into more applied issues starting with the next
+          session.
         </div>
         <div class="topicOrg">
           <strong>Deadline</strong> for status report on project.
