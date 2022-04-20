@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!-- begin SEO -->
+  <title>Data Compression With and Without Deep Probabilistic Models</title>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1.0">
+
+  <!-- generic favicons -->
+  <link rel="icon" type="image/svg+xml" href="../compress/favicon.svg">
+  <link rel="icon" href="../compress/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="../compress/favicon-57.png" sizes="57x57">
+  <link rel="icon" href="../compress/favicon-76.png" sizes="76x76">
+  <link rel="icon" href="../compress/favicon-96.png" sizes="96x96">
+  <link rel="icon" href="../compress/favicon-128.png" sizes="128x128">
+  <link rel="icon" href="../compress/favicon-192.png" sizes="192x192">
+  <link rel="icon" href="../compress/favicon-228.png" sizes="228x228">
+
+  <!-- Android -->
+  <link rel="shortcut icon" sizes="196x196" href="../compress/favicon-196.png">
+
+  <!-- iOS -->
+  <link rel="apple-touch-icon" href="../compress/favicon-120.png" sizes="120x120">
+  <link rel="apple-touch-icon" href="../compress/favicon-152.png" sizes="152x152">
+  <link rel="apple-touch-icon" href="../compress/favicon-180.png" sizes="180x180">
+
+  <style>
+    @font-face {
+
+      font-family: ZwoWebPro;
+      src: url(/fonts/zwo-web-pro-semilight-w04-regular.woff2) format('woff2'),
+        url('/fonts/zwo-web-pro-semilight-w04-regular.woff') format('woff'),
+        url('/fonts/zwo-web-pro-semilight-w04-regular.ttf');
+    }
+
+    @font-face {
+      font-family: ZwoWebPro;
+      src: url(/fonts/zwo-web-pro-semibold-w04-regular.woff2) format('woff2'),
+        url('/fonts/zwo-web-pro-semibold-w04-regular.woff') format('woff'),
+        url('/fonts/zwo-web-pro-semibold-w04-regular.ttf');
+      font-weight: bold;
+    }
+
+    @font-face {
+      font-family: ZwoWebPro;
+      src: url(/fonts/zwo-web-pro-semilight-w04-italic.woff2) format('woff2'),
+        url('/fonts/zwo-web-pro-semilight-w04-italic.woff') format('woff'),
+        url('/fonts/zwo-web-pro-semilight-w04-italic.ttf');
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: 'FontAwesome';
+      src: url("/fonts/fontawesome-webfont.eot");
+      src: url("/fonts/fontawesome-webfont.eot#iefix") format("embedded-opentype"),
+        url("/fonts/fontawesome-webfont.woff2") format("woff2"),
+        url("/fonts/fontawesome-webfont.woff") format("woff"),
+        url("/fonts/fontawesome-webfont.ttf") format("truetype"),
+        url("/fonts/fontawesome-webfont.svg#fontawesomeregular") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    a {
+      color: #16288d
+    }
+
+    a:hover {
+      color: #2a3ca7
+    }
+
+    a:visited {
+      color: #57168d
+    }
+
+    .icon {
+      display: inline-block;
+    }
+
+    .icon::before {
+      font-family: FontAwesome;
+      font-size: 90%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: inline-block;
+    }
+
+    ul.links,
+    ul.longlinks {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul.links>li {
+      display: inline-block;
+      margin-right: 1em;
+    }
+
+    ul.longlinks>li {
+      display: block;
+      margin: 0 0 0.7ex 2em;
+    }
+
+    .external::before {
+      content: "\f08e\a0";
+    }
+
+    .email::before {
+      content: "\f003\a0";
+    }
+
+    .video::before {
+      content: "\f01d\a0";
+    }
+
+    .pdf::before {
+      content: "\f1c1\a0";
+    }
+
+    .zip::before {
+      content: "\f1c6\a0";
+    }
+
+    .slides::before {
+      content: "\f26c\a0";
+    }
+
+    .chat::before {
+      content: "\f086\a0";
+    }
+
+    .code::before {
+      content: "\f1c9\a0";
+    }
+
+    body {
+      margin: 1em auto;
+      padding: 0 1em;
+      color: #494e52;
+      font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.5;
+      max-width: 1150px;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    footer {
+      padding: 2em 0 1em 0;
+      font-size: 75%;
+      opacity: 0.7;
+    }
+
+    .topics {
+      margin: -0.5em -0.5em -0.5em -0.25em;
+    }
+
+    .topic {
+      position: relative;
+      display: inline-grid;
+      margin: 0.5em 2.5em 0.5em 0.25em;
+      background-color: #a51e37;
+      border-radius: 0.6em;
+      padding: 0;
+      width: 20em;
+      height: 9.6em;
+      font-family: ZwoWebPro;
+    }
+
+    .doneWrapper {
+      position: relative;
+      height: 9.5em;
+      display: inline-grid;
+      margin: 2.5em 0.5em 0.5em 0.25em;
+      background-color: #2c495b;
+      border-radius: 0.6em;
+    }
+
+    .doneWrapper>.topic {
+      margin: -2em 2em 0 0;
+      height: 9.6em;
+    }
+
+    .topicData {
+      color: #f7d4de;
+      text-align: center;
+      width: 4.3em;
+    }
+
+    .topicNumber {
+      font-weight: bold;
+      font-size: 320%;
+      margin: -0.22em 0 -0.24em 0;
+    }
+
+    .session {
+      margin-top: 0.4em;
+      line-height: 2.35ex;
+    }
+
+    .sessionType {
+      font-weight: bold;
+    }
+
+    .topicDescription {
+      background-color: #b4a069;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 4.3em;
+      right: -2em;
+      padding: 0.3em 0.5em 0.2em 0.6em;
+      border-radius: 0.6em;
+      color: #32414b;
+    }
+
+    .topicDescription>h3 {
+      padding: 0;
+      margin: 0 0 0.4em 0;
+      font-size: 125%;
+      font-weight: bold;
+      line-height: 2.35ex;
+    }
+
+    .topicTeaser {
+      font-style: italic;
+      line-height: 2.35ex;
+    }
+
+    .topicOrg {
+      margin-top: 0.4em;
+      line-height: 2.35ex;
+    }
+
+    .topicLinks {
+      position: absolute;
+      top: 7.75em;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+
+    a.icon {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .topicLinks>a.icon,
+    .topicLinks>a.icon:visited {
+      color: #dde8ee;
+      margin: 0 0.2em;
+      transition: color 0.1s ease-in-out;
+    }
+
+    .topicLinks>a.icon:hover {
+      color: #fff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      html {
+        background: #222621;
+      }
+
+      body {
+        color: #e7e9e7;
+      }
+
+      h1,
+      h2 {
+        color: #f2f3f1;
+      }
+
+      a {
+        color: #ccd1ee
+      }
+
+      a:hover {
+        color: #ced6ff
+      }
+
+      a:visited {
+        color: #ddd5f3
+      }
+
+      .doneWrapper {
+        background-color: #32414b;
+      }
+
+      .topicLinks>a.icon,
+      .topicLinks>a.icon:visited {
+        color: #c4d3db;
+      }
+
+      .topicLinks>a.icon:hover {
+        color: #fff;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="page_title">Data Compression With and Without  Deep Probabilistic Models<br>(Summer Term 2022)</h1>
+  <p>Course by <a href="/">Prof. Robert Bamler</a> at <a href="https://uni-tuebingen.de/">University of
+      Tuebingen</a>.</p>
+
+  <h2>At a Glance</h2>
+  <ul>
+    <li><strong>Lectures:</strong> Thursdays 12:00-14:00 in room TTR2 (Maria-von-Linden-Straße 6, ground floor)</li>
+    <li><strong>Tutorials:</strong> Fridays 12:00-14:00 in room A302 (Sand 1).</li>
+    <li><strong>6 ECTS</strong></li>
+    <li>I'll try to also stream lectures and tutorials on Zoom (see link on <a class="icon external" target="_blank"
+      href="https://moodle.zdv.uni-tuebingen.de/course/view.php?id=2496">moodle</a>) but I highly encourage students to attend the in-person sessions in class instead.
+      To encourage interactivity, Zoom sessions will not be recorded.
+  </ul>
+
+  <h2>Links</h2>
+
+  <ul class="links">
+    <li>
+      <a class="icon external" target="_blank"
+        href="https://moodle.zdv.uni-tuebingen.de/course/view.php?id=2496">moodle</a>
+    </li>
+    <li>
+      <a class="icon external" target="_blank"
+        href="https://ovidius.uni-tuebingen.de/ilias3/goto.php?target=cat_3663241&client_id=pr02">Ilias</a>
+    </li>
+    <li>
+      <a class="icon email" href="/">contact lecturer</a>
+    </li>
+  </ul>
+
+  <h2>Additional Resources</h2>
+
+  <ul class="longlinks">
+    <li><a class="icon video" target="_blank"
+        href="https://www.youtube.com/playlist?list=PL05umP7R6ij0Mp1dW2HuXlb-UQIYnv8xK">related video playlist</a> (from last year's course, which covered slightly different topics)</li>
+  </ul>
+
+
+  <h2 id="schedule">Tentative Schedule &amp; Course Materials</h2>
+
+  <p>Details of the following schedule are still subject to change.</p>
+
+  <div class="topics">
+    <div class="topic">
+      <div class="topicDescription">
+        <h3>Overview and Symbol Codes</h3>
+        <div class="topicTeaser">
+          What is the connection between data compression, probabilistic models, and error correction?
+          We'll answer these questions with some concrete examples of so-called symbol codes.
+        </div>
+      </div>
+      <div class="topicData">
+        <div class="topicNumber">1</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">21 April</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">22. &amp; 29.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicDescription">
+        <h3>Theoretical Bounds of Lossless Compression (feat. Entropy&nbsp;&amp; Huffman Coding)</h3>
+        <div class="topicTeaser">
+          We'll derive the best possible lossless compression code for a given probabilistic model.
+        </div>
+      </div>
+      <div class="topicData">
+        <div class="topicNumber">2</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">28 April</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">6 May</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicDescription">
+        <h3>Probability Theory and Types of Probabilistic Models</h3>
+        <div class="topicTeaser">
+          Now that we know how important probabilities are for data compression, let's recap their theory and introduce a taxonomy of probabilistic models.
+        </div>
+      </div>
+      <div class="topicData">
+        <div class="topicNumber">3</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">5 May</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">13 May</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicDescription">
+        <h3>Stream Codes&nbsp;I: Arithmetic Coding and Range Coding</h3>
+        <div class="topicTeaser">
+          We've proved that Huffman Codes are optimal symbol codes.
+          But can we do better than symbol codes? Yes, if we're willing to think in fractional bits.
+        </div>
+      </div>
+      <div class="topicData">
+        <div class="topicNumber">4</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">12 May</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">20 May</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicDescription">
+        <h3>Stream Codes&nbsp;II: Asymmetric Numeral Systems (ANS)</h3>
+        <div class="topicTeaser">
+          This recently invented stream code is as performant as Range Coding while being much easier to implement.
+          But it has a caveat&nbsp;&mdash; or is it a feature?
+        </div>
+      </div>
+      <div class="topicData">
+        <div class="topicNumber">5</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">19 May</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">27 May</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicDescription">
+        <h3>Bits-Back Coding With Latent Variable Models</h3>
+        <div class="topicTeaser">
+          We'll generalize a trick from the ANS algorithm to arbitrary latent variable models.
+          You'll learn how to “short sell” bits (no, not on the stock exchange).
+        </div>
+      </div>
+      <div class="topicData">
+        <div class="topicNumber">6</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">2 June</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">10 June</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicDescription">
+        <h3>Variational Inference</h3>
+        <div class="topicTeaser">
+          It turns out that a mainstay of modern probabilistic machine learning, variational inference, can be derived directly from the Bits-Back trick.
+          And it has recently become a game changer in data compression too.
+        </div>
+      </div>
+      <div class="topicData">
+        <div class="topicNumber">7</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">3 June (!)</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">17 June</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicDescription">
+        <h3>Deep Probabilistic Models&nbsp;I: Variational Autoencoders</h3>
+        <div class="topicTeaser">
+          Now that we can do (approximate) inference in arbitrarily complicated models, we can introduce deep neural net&shy;works into our probabilistic models.
+        </div>
+      </div>
+      <div class="topicData">
+        <div class="topicNumber">8</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">23 June</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">1 July</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicDescription">
+        <h3>Channel Coding Theorem and Source-Channel Separation</h3>
+        <div class="topicTeaser">
+          We'll take a step back from com&shy;pres&shy;sion and consider the wider problem of efficient communication.
+          This will come in handy for lossy compression too.
+        </div>
+      </div>
+      <div class="topicData">
+        <div class="topicNumber">9</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">23 June</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">1 July</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicDescription">
+        <h3>Buffer</h3>
+        <div class="topicTeaser">
+          Poor Thursdays are so un&shy;der&shy;rep&shy;re&shy;sent&shy;ed in summer terms, leaving behind lone Fridays that don't pair up.
+          We'll reserve 24 June as a buffer and decide later whether we should use it for another lecture or for a tutorial.
+        </div>
+      </div>
+      <div class="topicData">
+        <div class="topicNumber">10</div>
+        <div class="session">
+          <div class="sessionType">Lecture or Tutorial</div>
+          <div class="sessionDate">24 June</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicDescription">
+        <h3>Theoretical Bounds of Lossy Compression (feat. Mutual Information&nbsp;&amp; R/D-Theory)</h3>
+        <div class="topicTeaser">
+          Lossy compression methods can achieve lower bitrates than lossless methods.
+          But they have a limit too.
+        </div>
+      </div>
+      <div class="topicData">
+        <div class="topicNumber">11</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">7 July</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">15 July</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicDescription">
+        <h3>Lossy Data Compression With Variational Autoencoders</h3>
+        <div class="topicTeaser">
+          Recently proposed compression methods use probabilistic machine learning methods to model the data source.
+          But this brings new challenges such as quantization.
+        </div>
+      </div>
+      <div class="topicData">
+        <div class="topicNumber">12</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">14 July</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">22 July</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicDescription">
+        <h3>Recent Advances in Machine-Learning Based Data Compression</h3>
+        <div class="topicTeaser">
+          Flows, quantization methods, prob&shy;a&shy;bi&shy;lis&shy;tic models for videos,&nbsp;&mdash;
+          modern compression research is a vibrant field.
+        </div>
+      </div>
+      <div class="topicData">
+        <div class="topicNumber">13</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">21 July</div>
+        </div>
+        <div class="session">
+          <div class="sessionType">Tutorial</div>
+          <div class="sessionDate">29 July</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topicDescription">
+        <h3>Recap</h3>
+        <div class="topicTeaser">
+          We've covered a lot of topics, but sometimes it's hard to see the forest for the trees.
+          Let's put all the things we've learned together.
+        </div>
+      </div>
+      <div class="topicData">
+        <div class="topicNumber">14</div>
+        <div class="session">
+          <div class="sessionType">Lecture</div>
+          <div class="sessionDate">6 July</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Font made from <a href="http://www.onlinewebfonts.com">www.onlinewebfonts.com</a> is licensed by CC BY 3.0
+  </footer>
+
+</body>
+
+</html>
