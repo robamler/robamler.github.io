@@ -76,10 +76,6 @@
       color: #57168d
     }
 
-    .icon {
-      display: inline-block;
-    }
-
     .icon::before {
       font-family: FontAwesome;
       font-size: 90%;
@@ -119,6 +115,10 @@
 
     .pdf::before {
       content: "\f1c1\a0";
+    }
+
+    .book::before {
+      content: "\f02d\a0"
     }
 
     .zip::before {
@@ -246,7 +246,6 @@
     }
 
     a.icon {
-      display: inline-block;
       text-decoration: none;
     }
 
@@ -341,8 +340,9 @@
   <h2>Additional Resources</h2>
 
   <ul class="longlinks">
+    <li><a class="icon book" target="_blank" href="http://www.inference.org.uk/mackay/itprnn/book.html">information theory book by David MacKay</a> (free PDF by the author)</li>
     <li><a class="icon video" target="_blank"
-        href="https://www.youtube.com/playlist?list=PL05umP7R6ij0Mp1dW2HuXlb-UQIYnv8xK">related video playlist</a> (from last year's course, which covered slightly different topics)</li>
+        href="https://www.youtube.com/playlist?list=PL05umP7R6ij0Mp1dW2HuXlb-UQIYnv8xK">video playlist from last year's course</a> (has some overlap with this year's course but won't cover all topics)</li>
   </ul>
 
 
