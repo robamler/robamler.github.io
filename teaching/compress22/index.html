@@ -521,10 +521,11 @@
     <div class="doneWrapper">
       <div class="topic">
         <div class="topicDescription">
-          <h3>Bits-Back Coding And Variational Inference</h3>
+          <h3>Bits-Back Coding</h3>
           <div class="topicTeaser">
             We generalize the so-called “bits-back trick” from the ANS algorithm to arbi&shy;trary latent variable models.
-            This leads to Variational Inference, a mainstay of modern probabilistic machine learning.
+            This allows us to use latent variables for data compression without paying for them.
+            Think of it as “short selling” bits.
           </div>
         </div>
         <div class="topicData">
@@ -548,9 +549,10 @@
     <div class="doneWrapper">
       <div class="topic">
         <div class="topicDescription">
-          <h3>Deep Latent Variable Models: Variational Autoencoders</h3>
+          <h3>Variational Inference</h3>
           <div class="topicTeaser">
-            Now that we can do (approximate) Bayesian inference in arbitrarily complicated probabilistic models, we can scale things up and introduce deep neural net&shy;works into our models.
+            This method for approximate Bayesian inference is a mainstay of modern probabilistic machine learning.
+            And&mdash;curiously&mdash;its most natural derivation actually builds on the bits-back coding algorithm.
           </div>
         </div>
         <div class="topicData">
@@ -573,10 +575,10 @@
 
     <div class="topic">
       <div class="topicDescription">
-        <h3>Channel Coding Theorem and Source-Channel Separation</h3>
+        <h3>Variational Autoencoders and Lossy Neural Compression</h3>
         <div class="topicTeaser">
-          We take a step back from com&shy;pres&shy;sion and consider the wider problem of efficient communication.
-          This will come in handy for lossy compression too.
+          We extend variational inference and learn both the generative model and how to do inference in it from training data.
+          This results in a popular class of models for lossy data compression.
         </div>
       </div>
       <div class="topicData">
@@ -594,10 +596,10 @@
 
     <div class="topic">
       <div class="topicDescription">
-        <h3>Theoretical Bounds of<br>Lossy Compression<br>(Rate/Distortion Theory)</h3>
+        <h3>Channel Coding Theorem and Source-Channel Separation</h3>
         <div class="topicTeaser">
-          Lossy compression methods can achieve lower bit rates than lossless methods.
-          But they have a limit too&mdash; which turns out to be an old friend.
+          We take a step back from com&shy;pres&shy;sion and consider the wider problem of efficient communication.
+          This will come in handy for lossy compression too.
         </div>
       </div>
       <div class="topicData">
@@ -615,10 +617,10 @@
 
     <div class="topic">
       <div class="topicDescription">
-        <h3>Lossy Data Compression With Variational Autoencoders</h3>
+        <h3>Theoretical Bounds of<br>Lossy Compression<br>(Rate/Distortion Theory)</h3>
         <div class="topicTeaser">
-          Recently proposed compression methods use probabilistic machine learning methods to model the data source.
-          But this brings new challenges such as quantization.
+          Lossy compression methods can achieve lower bit rates than lossless methods.
+          But they have a limit too&mdash; which turns out to be an old friend.
         </div>
       </div>
       <div class="topicData">
