@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!-- begin SEO -->
+  <title>Tutorial on Information Theory at IMPRS-IS Boot Camp 2024</title>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1.0">
+
+  <!-- generic favicons -->
+  <link rel="icon" type="image/svg+xml" href="../compress/favicon.svg">
+  <link rel="icon" href="../compress/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="../compress/favicon-57.png" sizes="57x57">
+  <link rel="icon" href="../compress/favicon-76.png" sizes="76x76">
+  <link rel="icon" href="../compress/favicon-96.png" sizes="96x96">
+  <link rel="icon" href="../compress/favicon-128.png" sizes="128x128">
+  <link rel="icon" href="../compress/favicon-192.png" sizes="192x192">
+  <link rel="icon" href="../compress/favicon-228.png" sizes="228x228">
+
+  <!-- Android -->
+  <link rel="shortcut icon" sizes="196x196" href="../compress/favicon-196.png">
+
+  <!-- iOS -->
+  <link rel="apple-touch-icon" href="../compress/favicon-120.png" sizes="120x120">
+  <link rel="apple-touch-icon" href="../compress/favicon-152.png" sizes="152x152">
+  <link rel="apple-touch-icon" href="../compress/favicon-180.png" sizes="180x180">
+
+  <style>
+    @font-face {
+      font-family: 'FontAwesome';
+      src: url("/fonts/fontawesome-webfont.eot");
+      src: url("/fonts/fontawesome-webfont.eot#iefix") format("embedded-opentype"),
+        url("/fonts/fontawesome-webfont.woff2") format("woff2"),
+        url("/fonts/fontawesome-webfont.woff") format("woff"),
+        url("/fonts/fontawesome-webfont.ttf") format("truetype"),
+        url("/fonts/fontawesome-webfont.svg#fontawesomeregular") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    a {
+      color: #16288d
+    }
+
+    a:hover {
+      color: #2a3ca7
+    }
+
+    a:visited {
+      color: #57168d
+    }
+
+    .icon::before {
+      font-family: FontAwesome;
+      font-size: 90%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: inline-block;
+    }
+
+    ul.links,
+    ul.longlinks {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul.links>li {
+      display: inline-block;
+      margin: 0 0 1ex 2em;
+    }
+
+    ul.longlinks>li {
+      display: block;
+      margin: 0 0 0.7ex 2em;
+    }
+
+    .external::before {
+      content: "\f08e\a0";
+    }
+
+    .home::before {
+      content: "\f015\a0";
+    }
+
+    .pdf::before {
+      content: "\f1c1\a0";
+    }
+
+    .book::before {
+      content: "\f02d\a0"
+    }
+
+    .code::before {
+      content: "\f1c9\a0";
+    }
+
+    body {
+      margin: 1em auto;
+      padding: 0 1em;
+      color: #494e52;
+      font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.5;
+      max-width: 1150px;
+    }
+
+    nav {
+      margin-bottom: 1em;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      html {
+        background: #222621;
+      }
+
+      body {
+        color: #e7e9e7;
+      }
+
+      h1,
+      h2 {
+        color: #f2f3f1;
+      }
+
+      a {
+        color: #ccd1ee
+      }
+
+      a:hover {
+        color: #ced6ff
+      }
+
+      a:visited {
+        color: #ddd5f3
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav><a class="icon home" href="/">Robert Bamler's home page</a></nav>
+
+  <h1 class="page_title">Tutorial on Information Theory at IMPRS-IS Boot Camp 2024</h1>
+  <p>
+    AllgäuSternHotel, Sonthofen, Germany; September 19, 2024.<br>
+    Instructor: <a href="/">Prof. Robert Bamler</a>
+  </p>
+
+  <h2>Course Materials</h2>
+
+  <ul class="longlinks">
+    <li><a class="icon pdf" target="_blank" href="handout-with-notes.pdf">Handout with notes</a></li>
+    <li><a class="icon code" target="_blank"
+        href="https://drive.google.com/file/d/1QF2mtcpIA3y-SbBjJWfsxrHqO0Zrd-0J">Google Colab notebook</a>:
+      text compression with GPT-2 (on the linked page, click on &ldquo;Open with Google Colaboratory&rdquo;)</li>
+  </ul>
+
+  <h2>Want to Learn More?</h2>
+
+  <ul class="longlinks">
+    <li><a class="icon book" href="../compress23/">Data Compression With and Without Deep Probabilistic Models</a>:
+      an extended version of this tutorial, given as a full-semester course at University of Tübingen (with lecture
+      notes, problem sets, and solutions).</li>
+  </ul>
+</body>
+
+</html>
